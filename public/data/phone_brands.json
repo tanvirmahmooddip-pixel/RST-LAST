@@ -1,0 +1,18 @@
+[
+  { "id": 1, "name": "Apple", "device_count": 142, "num_devices": 142 },
+  { "id": 2, "name": "Samsung", "device_count": 680, "num_devices": 680 },
+  { "id": 3, "name": "Xiaomi", "device_count": 420, "num_devices": 420 },
+  { "id": 4, "name": "Google", "device_count": 55, "num_devices": 55 },
+  { "id": 5, "name": "OnePlus", "device_count": 95, "num_devices": 95 },
+  { "id": 6, "name": "Huawei", "device_count": 310, "num_devices": 310 },
+  { "id": 7, "name": "Honor", "device_count": 215, "num_devices": 215 },
+  { "id": 8, "name": "Sony", "device_count": 180, "num_devices": 180 },
+  { "id": 9, "name": "Motorola", "device_count": 340, "num_devices": 340 },
+  { "id": 10, "name": "Nokia", "device_count": 490, "num_devices": 490 },
+  { "id": 11, "name": "Oppo", "device_count": 380, "num_devices": 380 },
+  { "id": 12, "name": "Vivo", "device_count": 360, "num_devices": 360 },
+  { "id": 13, "name": "Realme", "device_count": 270, "num_devices": 270 },
+  { "id": 14, "name": "Nothing", "device_count": 12, "num_devices": 12 },
+  { "id": 15, "name": "Infinix", "device_count": 190, "num_devices": 190 },
+  { "id": 16, "name": "Tecno", "device_count": 210, "num_devices": 210 }
+]

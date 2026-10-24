@@ -1,0 +1,4304 @@
+MAKE IT ENGLISH DEFAULT BANGLA ARABIC LANGUESES AND USED ADMIN GOOGLE DRIVE FOR ANY DETAILS AND WANT A SPACE. DOCUMENTS ANY SERIALS ADMIN ARE DECIEDED AND TECHNICAL EFFECST DESIGNEBLE SMOOTH ANY DEVICES BROWSERS ITS RUN AND FIT AUTOMATICLY AND DESIGNEELBLE THEM AND LUNCHER ADMIN PANNEL ARE CHANGES AND MAKING ANIMATION CONTROLS EFFECTS VOICE  SOUND ADMIN AND ALL USER NAME INFO PROFILES PIC ADD CHANGES OPTIONS VISITOR URL FAST LANDING PAGES AND PORTFOLIO AND LOGIN AND SIGN UP THAN ADMIN ERP BILLING AND QUTETIONS INVOICES MULTI PRINTED SIZES SUPPORTED ANY IME BUR CODE QR CODE SL DOC NO SL DASHBOARD PIN UN PIN ALL ARE SETTING UP THAN ITS WORKING AT ADMIN 
+A MULTIPERpose WEBSITE ,BLOG ,BUSSINESS INFORMATIONS UPDATES ,ADMIN AND USER LOG IN COMPANY ERP CRM HRM productivity dashboard that syncs across mobile and desktop devices.MAKE ITS design responsive, secure, and user-friendly with a modern minimalist aesthetic.DEPLOYMENTS ANY SERVERS for seamless scaling and automated cloud backups.GITHUB VERCEL NETIFY and ensure high-speed performance using advanced caching mechanisms.OR WORLD BEST BUSSINESS SOLUTION system that integrates seamlessly with existing databases.ANY custom authentication methods to guarantee data integrity for all enterprise users.BUILD robust APIs with comprehensive documentation for rapid team onboarding and integration.
+Paste October 19, 2026 - 3:45PM
+Gemini 3.8 Flash
+Ran for 0s
+error
+Your message exceeded the maximum number of tokens allowed.
+There was an unexpected error. Finish what you were doing.
+Gemini 3.8 Flash
+Ran for 0s
+error
+Your message exceeded the maximum number of tokens allowed.
+lightbulb_tips
+Suggestions
+Make changes, add new features, ask for anything
+
+/
+
+
+Reconcile expenses in expenses.csv with the invoices and flag all
+discrepancies.sales-erp/ ├── config.php ├── login.php ├── logout.php ├──
+dashboard.php ├── navbar.php ├── profile.php ← About Me / Profile page ├──
+database.sql ← Complete schema ├── install.php ├── .htaccess │ ├── assets/ │ └──
+css/ │ └── modern-ui.css ← Visual effects & animations │ ├── uploads/ │ ├──
+products/ ← Product images │ ├── avatars/ ← User profile photos │ ├── sales/ │
+├── invoices/ │ └── company/ │ ├── products/ │ ├── products-shop.php ←
+Electronics grid view │ ├── add.php │ ├── edit.php │ └── imei.php ← IMEI
+tracking for phones │ ├── brands/ │ └── index.php │ ├── categories/ │ └──
+index.php │ ├── sales/ │ ├── index.php │ ├── add.php │ ├── invoice.php │ └──
+view.php │ ├── customers/ │ ├── index.php │ └── ledger.php │ ├── accounting/ │
+├── cash-in-hand.php │ ├── expenses.php │ └── transactions.php │ ├── reports/ │
+├── index.php │ ├── sales-report.php │ ├── brand-report.php ← Sales by brand │
+└── item-wise-report.php ← Item-wise analysis │ ├── settings/ │ ├── company.php
+│ ├── users.php │ ├── audit-log.php │ └── recycle-bin.php │ └── error/
+├── 404.html └── 500.html
+
+Installation Instructions: Create Database:
+
+Create a MySQL database named sales_erp
+
+Import the database.sql file to create tables
+
+Configure Database:
+
+Update config.php with your database credentials
+
+Set the correct APP_URL for your installation
+
+Create Upload Directories:
+
+Create an uploads folder in your project root
+
+Ensure it has write permissions (755 or 777)
+
+Set Default Admin User:
+
+Run this SQL to create admin user (password: admin123):
+
+sql INSERT INTO users (username, password, full_name, email, role) VALUES
+('admin', '2y10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+'Administrator', 'admin@example.com', 'admin');
+
+Features Included: ✅ User Authentication - Secure login system ✅ Dashboard -
+Overview of key metrics ✅ Daily Sales Management - Add, edit, delete sales with
+product items ✅ File Attachments - Upload files for sales, deliveries, and
+deposits ✅ Delivery Payments - Track payments to delivery men ✅ Bank Deposits -
+Record bank deposits with attachment support ✅ Reports - Generate various
+reports with date filters ✅ DataTables - Interactive tables with sorting and
+searching ✅ Responsive Design - Works on desktop and mobile ✅ Print & Export -
+Print reports and export to Excel
+
+Set Default Admin User:
+
+Run this SQL to create admin user (password: admin123):
+Analyzing the Reconciliation
+I'm focusing on the core request to reconcile expenses with invoices from the provided CSV data. My immediate priority is to understand the structure of "expenses.csv" and its relationship to the invoice data. I'm carefully reviewing the file tree and documentation to identify relevant fields and potential matching keys for accurate reconciliation.
+Reviewing the Reconciliation Workflow
+I'm now diving into the reconciliation workflow outlined in AGENTS.md. I've taken note of the initial library installations and the "On-Demand Reconciliation" trigger. My next step is to understand the PDF invoice parsing process, particularly how the data extraction script works and how the LLM will be used to compile the parsed_invoices.json file.
+
+{}
+[STDOUT]
+Requirement already satisfied: google-genai>=2.0.0 in /usr/lib/python3/dist-packages (from -r /.agents/requirements.txt (line 1)) (2.28.0)
+Collecting pypdf>=4.0.0 (from -r /.agents/requirements.txt (line 2))
+  Downloading pypdf-6.19.0-py3-none-any.whl.metadata (7.5 kB)
+Requirement already satisfied: anyio<5.0.0,>=4.8.0 in /usr/lib/python3/dist-packages (from google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (4.15.1)
+Requirement already satisfied: google-auth<3.0.0,>=2.56.0 in /usr/lib/python3/dist-packages (from google-auth[requests]<3.0.0,>=2.56.0->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (2.60.0)
+Requirement already satisfied: httpx<1.0.0,>=0.28.1 in /usr/lib/python3/dist-packages (from google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (0.28.1)
+Requirement already satisfied: pydantic<3.0.0,>=2.12.5 in /usr/lib/python3/dist-packages (from google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (2.13.5)
+Requirement already satisfied: requests<3.0.0,>=2.28.1 in /usr/lib/python3/dist-packages (from google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (2.34.2)
+Requirement already satisfied: tenacity<9.2.0,>=8.2.3 in /usr/lib/python3/dist-packages (from google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (9.1.4)
+Requirement already satisfied: websockets<17.0,>=13.0.0 in /usr/lib/python3/dist-packages (from google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (16.1.1)
+Requirement already satisfied: typing-extensions<5.0.0,>=4.14.0 in /usr/lib/python3/dist-packages (from google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (4.16.0)
+Requirement already satisfied: distro<2,>=1.7.0 in /usr/lib/python3/dist-packages (from google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: sniffio in /usr/lib/python3/dist-packages (from google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: idna>=2.8 in /usr/lib/python3/dist-packages (from anyio<5.0.0,>=4.8.0->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (3.20)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /usr/lib/python3/dist-packages (from google-auth<3.0.0,>=2.56.0->google-auth[requests]<3.0.0,>=2.56.0->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (0.4.2)
+Requirement already satisfied: cryptography>=38.0.3 in /usr/lib/python3/dist-packages (from google-auth<3.0.0,>=2.56.0->google-auth[requests]<3.0.0,>=2.56.0->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (50.0.2)
+Requirement already satisfied: certifi in /usr/lib/python3/dist-packages (from httpx<1.0.0,>=0.28.1->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in /usr/lib/python3/dist-packages (from httpx<1.0.0,>=0.28.1->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (1.0.9)
+Requirement already satisfied: h11>=0.16 in /usr/lib/python3/dist-packages (from httpcore==1.*->httpx<1.0.0,>=0.28.1->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (0.16.0)
+Requirement already satisfied: annotated-types>=0.6.0 in /usr/lib/python3/dist-packages (from pydantic<3.0.0,>=2.12.5->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in /usr/lib/python3/dist-packages (from pydantic<3.0.0,>=2.12.5->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (2.46.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in /usr/lib/python3/dist-packages (from pydantic<3.0.0,>=2.12.5->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (0.4.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/lib/python3/dist-packages (from requests<3.0.0,>=2.28.1->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (3.5.2)
+Requirement already satisfied: urllib3<3,>=1.26 in /usr/lib/python3/dist-packages (from requests<3.0.0,>=2.28.1->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (2.8.0)
+Requirement already satisfied: cffi>=2.0.0 in /usr/lib/python3/dist-packages (from cryptography>=38.0.3->google-auth<3.0.0,>=2.56.0->google-auth[requests]<3.0.0,>=2.56.0->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (2.1.1)
+Requirement already satisfied: pyasn1<0.7.0,>=0.6.1 in /usr/lib/python3/dist-packages (from pyasn1-modules>=0.2.1->google-auth<3.0.0,>=2.56.0->google-auth[requests]<3.0.0,>=2.56.0->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (0.6.4)
+Requirement already satisfied: pycparser in /usr/lib/python3/dist-packages (from cffi>=2.0.0->cryptography>=38.0.3->google-auth<3.0.0,>=2.56.0->google-auth[requests]<3.0.0,>=2.56.0->google-genai>=2.0.0->-r /.agents/requirements.txt (line 1)) (3.0)
+Downloading pypdf-6.19.0-py3-none-any.whl (395 kB)
+/.agents/skills/reconciliation/SKILL.md
+---
+name: reconciliation
+description: Reconcile loaded expenses against the pre-parsed invoice database, flagging discrepancies like amount mismatches, missing invoices, and merchant mismatches locally.
+---
+
+# Reconciliation
+
+Reconcile expenses from `expenses.csv` against the pre-parsed invoice database (`parsed_invoices.json`) completely locally (offline). It compares records, performs fuzzy merchant matching, and generates a detailed discrepancies report.
+
+## Embedded Script
+
+```bash
+python3 skills/reconciliation/scripts/reconcile.py --workspace .agents/workspace
+```
+
+### Arguments
+
+| Argument | Default | Description |
+|----------|---------|-------------|
+| `--workspace` | `.agents/workspace` | Workspace directory containing expenses.csv and parsed_invoices.json |
+| `--tolerance` | `0.01` | Amount match tolerance in dollars |
+
+### What it does
+
+1. Loads `expenses.csv` from `.agents/workspace/` (columns: date, employee, merchant, category, amount, memo).
+2. Loads `parsed_invoices.json` from `.agents/workspace/` (generated by the `pdf-parsing` skill).
+3. Performs local fuzzy matching between expenses and invoice records (normalized merchant names, amount tolerance).
+4. Flags discrepancies: Amount Mismatch, Missing Invoice, Unmatched Invoice, Merchant Mismatch.
+5. Generates `.agents/workspace/reconciliation_report.md` with summary stats and discrepancy tables.
+6. Generates `.agents/workspace/reconciliation_data.json` with machine-readable matched results.
+
+### Dependencies
+
+*None! This script runs 100% locally with zero external API calls.*
+
+## Discrepancy Types
+
+| Type | Description |
+|------|-------------|
+| **Amount Mismatch** | Expense and invoice matched by merchant but amounts differ beyond tolerance |
+| **Missing Invoice** | Expense record exists with no matching invoice document |
+| **Unmatched Invoice** | Invoice document exists with no matching expense record |
+| **Merchant Mismatch** | Expense and invoice matched by amount but merchant names differ significantly |
+
+## Output
+
+| File | Path | Description |
+|------|------|-------------|
+| Reconciliation Report | `.agents/workspace/reconciliation_report.md` | Human-readable markdown report with summary stats, discrepancy table, and matched items |
+| Reconciliation Data | `.agents/workspace/reconciliation_data.json` | Structured JSON with expenses, invoices, matches, and discrepancies |
+
+
+/.agents/skills/pdf-parsing/SKILL.md
+---
+name: pdf-parsing
+description: Exposes a 100% local, offline PDF batch extraction utility (extract_to_markdown.py) that isolates invoices under invoices/ and translates PDFs into clean Markdown files for LLM-native parsing.
+---
+
+# PDF Invoice Local Extraction
+
+This skill exposes a 100% offline, local PDF batch extraction utility (`extract_to_markdown.py`) that isolates all invoice documents inside the `invoices/` directory and exports them into clean, readable Markdown files (`.md`).
+
+This runs entirely offline without any external network, server, or API key dependencies. This decouples raw text extraction from structuring, allowing you (the LLM agent) to perform robust, flexible data extraction natively without relying on fragile regular expressions.
+
+## Batch Extraction Tool: `extract_to_markdown.py`
+
+Processes a directory of PDF invoices sequentially, isolating all PDFs into a dedicated `invoices/` subdirectory and converting each to a matching `.md` file.
+
+```bash
+python3 skills/pdf-parsing/scripts/extract_to_markdown.py --workspace .agents/workspace
+```
+
+* **Standard PDF Files**: Uses `pypdf` locally to instantly extract text and save it as `<filename>.md` under `.agents/workspace/invoices/`.
+
+---
+
+## Agent Orchestration Guidelines
+
+As the LLM agent, you should coordinate the invoice structuring workflow as follows:
+
+1. **Move and Batch Extract**: Execute the batch extraction tool:
+   ```bash
+   python3 /.agents/skills/pdf-parsing/scripts/extract_to_markdown.py --workspace .agents/workspace
+   ```
+   This isolates all invoices inside `.agents/workspace/invoices/` and populates the folder with matching `<invoice_name>.md` files.
+
+2. **LLM-Native Structuring**: Read the generated `.md` files under `.agents/workspace/invoices/`. Use your own agent reasoning (LLM context) to natively extract the structured fields from the markdown:
+   - `merchant_name`
+   - `date` (format: `YYYY-MM-DD`)
+   - `amount` (float)
+   - `invoice_number`
+   - `source_file`
+
+3. **Compile Structured Database**: Combine all structured invoice objects into a single JSON list and save it directly as `.agents/workspace/parsed_invoices.json` using your file creation tools, matching this schema:
+   ```json
+   [
+     {
+       "date": "2026-05-15",
+       "merchant_name": "Google",
+       "amount": 150.00,
+       "invoice_number": "INV-GCP-1029",
+       "source_file": "google_invoice.png"
+     }
+   ]
+   ```
+
+### Dependencies
+
+- `pypdf` (>= 4.0.0)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 395.5/395.5 kB 12.3 MB/s eta 0:00:00
+[STDERR]
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Installing collected packages: pypdf
+Successfully installed pypdf-6.19.0
+Analyzing Invoice Data
+I'm currently focused on extracting key data points from a set of 20 invoices. The goal is to populate a parsed_invoices.json file, using the schema defined in /.agents/skills/pdf-parsing/SKILL.md. I'm carefully reviewing each invoice to identify and extract the required fields: date, merchant name, and amount.
+Generating Downloadable Output
+I've successfully configured the system to generate a downloadable .txt file containing the master prompt. The "UNIVERSAL MOBILE, ELECTRON" system prompt is now formatted and ready for export. I am also working on streamlining the process, making sure that generating such files is easy and effortless going forward.
+Refining Prompt Structure
+I'm now integrating ERP system components (POS, Inventory, Accounting) into the master prompt, focusing on seamless integration. I'm also adding ERP implementation strategies and checking for brand-asset consistency. The goal is a highly functional and well-structured prompt that is also a downloadable .txt file for easy use. I'm considering best practices, like direct file URIs and citing sources.
+Clarifying File Paths
+I'm now resolving conflicting instructions regarding file URIs. I've noted that, within the AI Studio Playground environment, I should use absolute paths with file:// URIs for specific files. This overrides general guidelines. I'm also determining the correct save location for the generated .txt file, deciding between /universal_erp_master_system_prompt.txt and .agents/workspace/universal_erp_master_system_prompt.txt. I must also check the content provided by the user to use in the master prompt.
+Defining System Specifications
+I'm now integrating the user's detailed specifications for the UNIVERSAL MOBILE, ELECTRONICS system into the master prompt. This includes the target AI platforms, company example, currency, VAT, supported languages, and the required tech stack for the ERP system. It's becoming clearer how to structure the prompt, starting with the core business aspects.
+Defining Vertical Integration
+I am now focusing on integrating the six identified business verticals into the ERP system. I'm carefully analyzing the specific requirements for each vertical, including mobile phone sales with IMEI tracking, accessories, CCTV systems, repair services, and bill payment services. I must make sure that it's all seamless, from the sales of electronics and accessories, right through to providing installation job cards, and the after-sales repair service.
+Integrating Accounting Logic
+I'm now focusing on integrating accounting rules, specifically the balanced journal entries triggered by sales. I'm making sure that the system correctly handles income tracking and end-of-day reconciliation. I'm also addressing the admin's ability to dynamically manage providers and incorporating the database architecture details, ensuring tenant isolation and proper money column formatting (DECIMAL(18,3) OMR).
+Defining Accounting Logic
+I'm now focusing on the accounting logic, specifically the balanced journal entries. I've worked out the journal entries from sales, ensuring I accurately account for revenue, VAT, COGS, and inventory. I am also working out the roles and permissions, focusing on strict RBAC. I'm starting by defining roles like Master Admin, Admin, Manager, Operator/Cashier, Accountant, Service Technician, and Inventory Storekeeper. Permissions will be stored in dedicated tables for clear access control.
+Outlining Functional Components
+I'm now outlining key functional modules: database schema with tenant isolation, permission catalogs, and language seeds. I'm building out authentication, user roles, and permissions, including company, branch, and general settings. I'm focusing on products, categories, and purchases, along with stock movements and sales processes, including invoices and customer ledgers.
+Specifying Functional Requirements
+I'm now detailing additional essential functionalities. I'm focusing on tenant isolation via company_id across all tables for multi-branch stock and transfers. I'm also specifying IMEI/serial number tracking for mobile phones, barcode scanner integration, and POS keyboard shortcuts. Furthermore, I'm integrating WhatsApp invoice sharing, dark/light theme toggles, configurable session timeouts, login history, activity logs, and comprehensive database backup/restore features, all while striving for a responsive UI. I'm taking the above deliverables as a checklist.
+Defining Coding Standards
+I'm now detailing coding standards for the ERP system to ensure security and maintainability. This includes using prepared statements to prevent SQL injection, writing clean and commented PHP, separating concerns, and handling monetary calculations with bcmath or exact decimal arithmetic. I'm ensuring automatic accounting posts for every sale/purchase. I am also working with language files for UI text and RTL support.
+
+Completed Enhancements & Capabilities
+1. User Accounts, Permissions & Access Control (Admin-Only Profit & Loss)
+Granular Permissions & Visibility: Admin can toggle, hide, or unhide any ERP page (pos, inventory, sql, accounts, telecom, catalog, phones, adminCenter, damages) per user role (admin, manager, staff, cashier) or specific user account.
+Cost & Margin Protection: Non-admin roles can have cost prices, profit margins, financial summaries, supplier balances, and damage costs completely hidden.
+User Account Management: Create, edit, activate/deactivate, or delete user accounts with custom branch assignments and tailored permission sets.
+2. Mobile Brands & Phone Models Catalog
+Global & Oman Telecom Brands: Over 10,630 mobile models from Apple, Samsung, Xiaomi, Huawei, Honor, Google, OnePlus, Sony, Nokia, and local telecom distributors.
+Admin Model Management: Admins can add custom mobile models, specify images, customize technical specifications (OS, storage, RAM, cameras, display, chipset), and fix purchased/wholesale and retail prices.
+Direct Stock Integration: Import any catalog phone into store inventory with auto-generated EAN-13 barcodes and Luhn-compliant 15-digit IMEIs.
+3. Quotations & Tax Invoices
+Quotation Generator: Build multi-item official quotations for corporate and VIP clients with custom discounts, validity periods, and notes.
+Print & Conversion: View and print branded quotations or convert them to official tax invoices.
+4. VIP Customers, Loyalty Points & Gift Cards
+VIP Badging & Credit Tracking: VIP customer identification, loyalty point accrual, tier status (Bronze, Silver, Gold), and credit alerts.
+Gift Cards & Vouchers: Issue, track, and redeem percentage or fixed OMR discount gift vouchers.
+5. Top Telecom Oman & Bill Payments
+Integrated Telecom Operators: Omantel, Ooredoo Oman, Vodafone Oman, and Awasr fiber internet, along with Nama Electricity and Water utilities.
+Recharge & Commission Calculations: Operator balance management, transaction history, and profit commission calculations.
+6. Public Visitor Landing Page & Tech Blog
+B2B Showcase Without Retail Prices: Public showcase where visitors can browse mobile models and electronic components; retail prices are hidden in favor of direct wholesale quote requests.
+Business Informatics & Portfolio: Showcases commercial registration, Oman Telecom partner affiliations, repair lab capabilities, and interactive portfolio stats.
+Integrated Blog: Tech insights, 5G updates in Oman, and electronics repair guides.
+One-Click ERP Portal Switch: Easily switch between public showcase and personal ERP login.
+7. Theme Launcher, Dashboard Customization & SQL Studio
+Theme Launcher: Six color themes (Emerald, Obsidian, Sapphire, Amethyst, Solar, Cyberpunk) with customizable typography scaling and audio feedback.
+Dashboard Pin/Unpin: Toggle and pin/unpin individual dashboard widgets.
+SQL Studio in Admin: Execute raw SQL queries in-browser, inspect tables, and export database dumps.
+8. Cloud Integrations & Free Voice AI
+Cloud Backups: One-click database exports for GitHub, Google Drive JSON backups, and pre-formatted Gmail order templates.
+Free Web Speech AI Engine: Native browser-based speech recognition and text-to-speech readout.
+UNIVERSAL MOBILE, ELECTRONICS, CCTV, ACCESSORIES & REPAIR SHOP
+ERP + POS + INVENTORY + ACCOUNTING + BILL PAYMENT SYSTEM
+MASTER SYSTEM PROMPT
+================================================================================
+
+Target AI: Google AI Studio / Gemini / DeepSeek / ChatGPT / Claude
+Target Company Example: RST Electronics (Oman)
+Currency: OMR (Omani Rial) – strict 3 decimal places (0.000)
+Default VAT: 5.000 % (Oman Tax Authority compliant)
+Languages: English + Arabic (RTL) + Bangla + Urdu
+Architecture: Multi-company + Multi-branch + Tenant isolation
+Tech Stack (Strict):
+  - Backend: PHP 8.x (OOP preferred, clean structure)
+  - Database: MySQL / MariaDB
+  - Frontend: HTML5 + CSS3 + Bootstrap 5 + JavaScript + jQuery + AJAX
+  - Charts: Chart.js
+  - Responsive + Mobile-friendly + PWA-ready
+  - Security: Prepared statements, CSRF tokens, session management, RBAC
+
+================================================================================
+1. CORE BUSINESS DOMAIN
+================================================================================
+The system must support these 6 integrated verticals in one platform:
+
+1. Mobile Phone Sales & Trade-in
+   - IMEI 1 + IMEI 2 tracking
+   - Serial number tracking
+   - Color, storage, condition (New / Used / Refurbished)
+   - Warranty & battery health
+
+2. Mobile Accessories & Multimedia
+   - Screen protectors, 3D back covers, chargers, cables, earbuds, speakers, household electronics
+   - Fast barcode / SKU scanning
+
+3. CCTV, Security, Smart Door & Intercom
+   - Cameras, DVR/NVR, HDDs, power supplies, video door phones, biometric locks
+   - Sales + Installation job cards + technician work orders
+
+4. Repair & Service Centre
+   - Job cards with fault checklist
+   - Status flow: Pending → Diagnosed → Waiting Parts → In Progress → Quality Check → Delivered
+   - Spare parts taken directly from inventory
+   - Warranty tracking
+
+5. Oman Bill Payment & Recharge Counter
+   - Telecom: Omantel, Ooredoo, Vodafone Oman
+   - Utilities: Nama Electricity, Nama Water, ROP, Municipality
+   - Commission income tracking + end-of-day reconciliation
+   - Admin can add/edit/remove providers dynamically
+
+6. General Retail + Multi-branch Inventory
+
+================================================================================
+2. DATABASE ARCHITECTURE (Phase 1 already defined – follow exactly)
+================================================================================
+- Every business table MUST carry a `company_id` and be protected by tenant-isolation rules.
+- Money columns: DECIMAL(18,3)
+- Default currency: OMR 0.000
+- Default VAT: 5.000%
+- 66 tables total (as listed in Phase 1)
+
+Core groups:
+• Tenancy & Identity (9 tables)
+• Localisation & Audit (6 tables)
+• Catalog & IMEI (9 tables)
+• Inventory (7 tables)
+• Purchasing (7 tables)
+• Selling & POS (12 tables)
+• Accounting & VAT (10 tables)
+• Service & Bill Payment (6 tables)
+
+Accounting rule that MUST be enforced in code:
+Every sale automatically creates a balanced journal entry:
+
+Dr  Cash / Accounts Receivable     grand_total
+    Cr  Sales Revenue                taxable_amount
+    Cr  VAT Payable                  vat_amount
+Dr  Cost of Goods Sold             cogs_amount
+    Cr  Inventory                    cogs_amount
+
+Gross Profit = Revenue – COGS
+Net Profit   = Gross Profit – Expenses + Other Income
+
+================================================================================
+3. USER ROLES & PERMISSIONS (RBAC)
+================================================================================
+Roles (exact):
+1. Master Admin          – Full control over all companies
+2. Admin                 – Company-level full control
+3. Manager               – Branch reports, inventory, approvals
+4. Operator / Cashier    – POS only (cannot see cost price)
+5. Accountant            – Full accounting + VAT + P&L
+6. Service Technician    – Repair job cards only
+7. Inventory Storekeeper – Stock, transfers, adjustments
+8–10. Additional custom roles as needed
+
+Permissions stored in dedicated tables.
+No privilege escalation possible.
+
+================================================================================
+4. KEY MODULES TO BUILD (in this exact order)
+================================================================================
+1. Database schema + tenant isolation + permission catalog + language seeds
+2. Authentication, users, roles, permissions
+3. Company / Branch / Settings
+4. Products, Categories, Brands, Units, Variants, Barcodes, IMEI/Serial
+5. Purchases + Stock movements
+6. POS + Sales + Invoices + Payments
+7. Customers + Suppliers + Ledgers
+8. Double-entry Accounting + Journal entries
+9. Profit & Loss + Reports (PDF + Excel)
+10. Service Centre / Repair
+11. Bill Payment Centre
+12. Oman VAT module
+13. Backup & Restore
+14. Multi-language (EN / AR / BN / UR) + RTL/LTR switching
+15. Printing templates (A4 / A5 / 80mm thermal)
+16. Dashboard + Charts
+17. Security audit
+18. Final testing
+
+================================================================================
+5. CRITICAL TECHNICAL REQUIREMENTS
+================================================================================
+• Strict 3-decimal money handling everywhere (OMR)
+• VAT never treated as revenue or profit
+• Multi-company tenant isolation (company_id on every table)
+• Multi-branch stock + inter-branch transfers
+• IMEI/Serial mandatory for mobile phones
+• Barcode scanner ready (auto-enter)
+• Keyboard shortcuts in POS (F1 search, F2 customer, F4 pay, F8 hold, F9 print)
+• WhatsApp-ready invoice share link
+• Dark / Light theme toggle
+• Session timeout configurable
+• Login history + activity logs
+• Full database backup / restore (manual + scheduled)
+• Responsive UI inspired by ERPNext / Odoo / Zoho
+
+================================================================================
+6. DELIVERABLES YOU MUST PRODUCE
+================================================================================
+When generating code, always produce:
+1. Complete SQL schema (CREATE TABLE statements)
+2. Folder structure
+3. Config files
+4. Authentication system
+5. Each module one by one (do not skip)
+6. Installation / README instructions
+7. Default Master Admin login: admin / admin123
+
+================================================================================
+7. CODING RULES
+================================================================================
+• Use prepared statements only (no SQL injection)
+• Clean, commented, modular PHP
+• Separate concerns (controllers / models / views if possible)
+• All monetary calculations must use bcmath or exact decimal arithmetic
+• Every sale/purchase must auto-post to accounting
+• Language files or translations table must be used for all UI text
+• RTL support for Arabic & UrSystem & Company Configuration: Target specs for RST Electronics (Oman), OMR 3-decimal precision (DECIMAL(18,3)), 5.000% Oman Tax Authority-compliant VAT, and multi-language support (English, Arabic RTL, Bangla, Urdu).
+6 Integrated Verticals:
+Mobile Phone Sales & Trade-In (IMEI 1 & 2 tracking, condition, battery health, serials)
+Mobile Accessories & Multimedia (Fast barcode/SKU scanning)
+CCTV & Smart Security (Equipment, installation job cards, work orders)
+Repair & Service Centre (Job cards, fault checklists, inventory-linked spare parts)
+Oman Bill Payment & Recharge Counter (Omantel, Ooredoo, Vodafone, Nama, ROP, dynamic providers)
+General Retail & Multi-Branch Inventory
+Strict Architecture & Accounting Rules:
+Mandatory tenant isolation (company_id on all 66 tables)
+Automated double-entry balanced journal posting on every sale (COGS, VAT payable, inventory, cash/receivables)
+RBAC & 18-Phase Implementation Order:
+10 distinct user roles with zero privilege escalation
+Step-by-step modular progression from Schema, Auth, POS, to Double-entry Accounting and Reports.
+================================================================================
+Begin by confirming you understand the full requirements.
+Then generate Phase 1 (Database Schema) first, exactly matching the 66-table structure described.
+After that, wait for the user to say “Continue” before moving to the next phase.
+
+Do not generate incomplete skeletons.
+Generate production-ready, working code.
+CREATE DATABASE IF NOT EXISTS rst_electronics
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE rst_electronics;
+
+CREATE TABLE branches (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  code VARCHAR(30) NOT NULL UNIQUE,
+  phone VARCHAR(30),
+  address VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE users (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  branch_id INT UNSIGNED NULL,
+  username VARCHAR(60) NOT NULL UNIQUE,
+  full_name VARCHAR(120) NOT NULL,
+  role ENUM('master_admin','admin','manager','cashier','sales','store','accountant','hr','viewer') NOT NULL DEFAULT 'sales',
+  password_hash VARCHAR(255) NULL,
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE categories (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  parent_id INT UNSIGNED NULL,
+  FOREIGN KEY (parent_id) REFERENCES categories(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE brands (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL UNIQUE
+) ENGINE=InnoDB;
+
+CREATE TABLE suppliers (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(160) NOT NULL,
+  phone VARCHAR(30),
+  whatsapp VARCHAR(30),
+  email VARCHAR(120),
+  address VARCHAR(255),
+  opening_balance DECIMAL(15,3) NOT NULL DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE customers (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(160) NOT NULL,
+  phone VARCHAR(30),
+  whatsapp VARCHAR(30),
+  email VARCHAR(120),
+  address VARCHAR(255),
+  opening_balance DECIMAL(15,3) NOT NULL DEFAULT 0,
+  credit_limit DECIMAL(15,3) NOT NULL DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE products (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  sku VARCHAR(80) NOT NULL UNIQUE,
+  barcode VARCHAR(100) UNIQUE,
+  imei VARCHAR(80) NULL UNIQUE,
+  name VARCHAR(180) NOT NULL,
+  category_id INT UNSIGNED NULL,
+  brand_id INT UNSIGNED NULL,
+  unit VARCHAR(20) NOT NULL DEFAULT 'pcs',
+  cost_price DECIMAL(15,3) NOT NULL DEFAULT 0,
+  sale_price DECIMAL(15,3) NOT NULL DEFAULT 0,
+  vat_rate DECIMAL(5,2) NOT NULL DEFAULT 5.00,
+  min_stock DECIMAL(15,3) NOT NULL DEFAULT 0,
+  active TINYINT(1) NOT NULL DEFAULT 1,
+  warranty_months INT UNSIGNED NOT NULL DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL,
+  FOREIGN KEY (brand_id) REFERENCES brands(id) ON DELETE SET NULL,
+  INDEX idx_product_name(name)
+) ENGINE=InnoDB;
+
+CREATE TABLE warehouses (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  branch_id INT UNSIGNED NOT NULL,
+  name VARCHAR(120) NOT NULL,
+  code VARCHAR(30) NOT NULL UNIQUE,
+  FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE stock (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  warehouse_id INT UNSIGNED NOT NULL,
+  product_id INT UNSIGNED NOT NULL,
+  qty DECIMAL(15,3) NOT NULL DEFAULT 0,
+  UNIQUE KEY uq_stock(warehouse_id, product_id),
+  FOREIGN KEY (warehouse_id) REFERENCES warehouses(id) ON DELETE CASCADE,
+  FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE stock_moves (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  warehouse_id INT UNSIGNED NOT NULL,
+  product_id INT UNSIGNED NOT NULL,
+  move_type ENUM('purchase','sale','return_in','return_out','transfer_in','transfer_out','adjustment','damage') NOT NULL,
+  qty DECIMAL(15,3) NOT NULL,
+  unit_cost DECIMAL(15,3) NOT NULL DEFAULT 0,
+  ref_type VARCHAR(30),
+  ref_id BIGINT UNSIGNED NULL,
+  note VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (warehouse_id) REFERENCES warehouses(id),
+  FOREIGN KEY (product_id) REFERENCES products(id),
+  INDEX idx_stock_moves_product(product_id, created_at)
+) ENGINE=InnoDB;
+
+CREATE TABLE sales (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  invoice_no VARCHAR(50) NOT NULL UNIQUE,
+  customer_id INT UNSIGNED NULL,
+  branch_id INT UNSIGNED NOT NULL,
+  warehouse_id INT UNSIGNED NOT NULL,
+  user_id INT UNSIGNED NULL,
+  subtotal DECIMAL(15,3) NOT NULL DEFAULT 0,
+  discount DECIMAL(15,3) NOT NULL DEFAULT 0,
+  vat_rate DECIMAL(5,2) NOT NULL DEFAULT 5.00,
+  vat_amount DECIMAL(15,3) NOT NULL DEFAULT 0,
+  total DECIMAL(15,3) NOT NULL DEFAULT 0,
+  paid DECIMAL(15,3) NOT NULL DEFAULT 0,
+  balance DECIMAL(15,3) NOT NULL DEFAULT 0,
+  status ENUM('draft','posted','paid','partial','cancelled','returned') NOT NULL DEFAULT 'draft',
+  sale_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE SET NULL,
+  FOREIGN KEY (branch_id) REFERENCES branches(id),
+  FOREIGN KEY (warehouse_id) REFERENCES warehouses(id),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE sale_items (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  sale_id BIGINT UNSIGNED NOT NULL,
+  product_id INT UNSIGNED NOT NULL,
+  qty DECIMAL(15,3) NOT NULL,
+  unit_price DECIMAL(15,3) NOT NULL,
+  discount DECIMAL(15,3) NOT NULL DEFAULT 0,
+  vat_rate DECIMAL(5,2) NOT NULL DEFAULT 5.00,
+  vat_amount DECIMAL(15,3) NOT NULL DEFAULT 0,
+  line_total DECIMAL(15,3) NOT NULL DEFAULT 0,
+  FOREIGN KEY (sale_id) REFERENCES sales(id) ON DELETE CASCADE,
+  FOREIGN KEY (product_id) REFERENCES products(id)
+) ENGINE=InnoDB;
+
+CREATE TABLE purchases (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  purchase_no VARCHAR(50) NOT NULL UNIQUE,
+  supplier_id INT UNSIGNED NULL,
+  branch_id INT UNSIGNED NOT NULL,
+  warehouse_id INT UNSIGNED NOT NULL,
+  subtotal DECIMAL(15,3) NOT NULL DEFAULT 0,
+  discount DECIMAL(15,3) NOT NULL DEFAULT 0,
+  vat_amount DECIMAL(15,3) NOT NULL DEFAULT 0,
+  total DECIMAL(15,3) NOT NULL DEFAULT 0,
+  paid DECIMAL(15,3) NOT NULL DEFAULT 0,
+  balance DECIMAL(15,3) NOT NULL DEFAULT 0,
+  status ENUM('draft','posted','paid','partial','cancelled') NOT NULL DEFAULT 'draft',
+  purchase_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (supplier_id) REFERENCES suppliers(id) ON DELETE SET NULL,
+  FOREIGN KEY (branch_id) REFERENCES branches(id),
+  FOREIGN KEY (warehouse_id) REFERENCES warehouses(id)
+) ENGINE=InnoDB;
+
+CREATE TABLE purchase_items (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  purchase_id BIGINT UNSIGNED NOT NULL,
+  product_id INT UNSIGNED NOT NULL,
+  qty DECIMAL(15,3) NOT NULL,
+  unit_cost DECIMAL(15,3) NOT NULL,
+  vat_rate DECIMAL(5,2) NOT NULL DEFAULT 5.00,
+  vat_amount DECIMAL(15,3) NOT NULL DEFAULT 0,
+  line_total DECIMAL(15,3) NOT NULL DEFAULT 0,
+  FOREIGN KEY (purchase_id) REFERENCES purchases(id) ON DELETE CASCADE,
+  FOREIGN KEY (product_id) REFERENCES products(id)
+) ENGINE=InnoDB;
+
+CREATE TABLE payments (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  customer_id INT UNSIGNED NULL,
+  supplier_id INT UNSIGNED NULL,
+  sale_id BIGINT UNSIGNED NULL,
+  purchase_id BIGINT UNSIGNED NULL,
+  payment_type ENUM('sale','purchase','customer_receipt','supplier_payment','expense','income','refund') NOT NULL,
+  method ENUM('cash','bank','card','transfer','other') NOT NULL DEFAULT 'cash',
+  amount DECIMAL(15,3) NOT NULL,
+  reference_no VARCHAR(80),
+  note VARCHAR(255),
+  paid_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE SET NULL,
+  FOREIGN KEY (supplier_id) REFERENCES suppliers(id) ON DELETE SET NULL,
+  FOREIGN KEY (sale_id) REFERENCES sales(id) ON DELETE SET NULL,
+  FOREIGN KEY (purchase_id) REFERENCES purchases(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE expenses (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(160) NOT NULL,
+  category VARCHAR(100),
+  amount DECIMAL(15,3) NOT NULL,
+  payment_method ENUM('cash','bank','card','transfer','other') NOT NULL DEFAULT 'cash',
+  expense_date DATE NOT NULL,
+  note VARCHAR(255)
+) ENGINE=InnoDB;
+
+CREATE TABLE employees (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  employee_code VARCHAR(40) NOT NULL UNIQUE,
+  name VARCHAR(160) NOT NULL,
+  phone VARCHAR(30),
+  job_title VARCHAR(100),
+  salary DECIMAL(15,3) NOT NULL DEFAULT 0,
+  joining_date DATE NULL,
+  status ENUM('active','inactive') NOT NULL DEFAULT 'active'
+) ENGINE=InnoDB;
+
+CREATE TABLE audit_logs (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id INT UNSIGNED NULL,
+  action VARCHAR(80) NOT NULL,
+  table_name VARCHAR(80),
+  record_id BIGINT UNSIGNED NULL,
+  details JSON NULL,
+  ip_address VARCHAR(45),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+INSERT INTO branches(name,code,phone,address)
+VALUES('RST Main Branch','RST-MAIN','+968','Oman')
+ON DUPLICATE KEY UPDATE name=VALUES(name);
+
+INSERT INTO warehouses(branch_id,name,code)
+SELECT id,'Main Warehouse','WH-MAIN' FROM branches WHERE code='RST-MAIN'
+AND NOT EXISTS (SELECT 1 FROM warehouses WHERE code='WH-MAIN');
+
+INSERT INTO categories(name) VALUES
+('Mobiles'),('Accessories'),('Laptops'),('Tablets'),('Chargers'),('Audio')
+ON DUPLICATE KEY UPDATE name=name;
+
+INSERT INTO brands(name) VALUES ('Apple'),('Samsung'),('Xiaomi'),('Anker')
+ON DUPLICATE KEY UPDATE name=name;
+import alasql from 'alasql';
+import { 
+  ElectronicComponent, 
+  Product, 
+  Customer, 
+  Invoice, 
+  TelecomOperator, 
+  TelecomTransaction, 
+  BusinessConfig,
+  AppNotification,
+  Branch,
+  LoyaltyCard,
+  DamageEntry,
+  EmergencyAlert,
+  AuditLog,
+  User,
+  Employee,
+  AttendanceRecord,
+  AttendanceShiftCategory,
+  AttendancePermissionRule,
+  AttendanceSettings,
+  PhoneBrand,
+  PhoneDevice,
+  Quotation,
+  QuotationItem,
+  BlogPost,
+  LandingPageConfig
+} from '../types';
+import { generateEAN13, generateIMEI } from './barcode';
+import { SoundEngine } from './sound';
+
+export const DEFAULT_LANDING_PAGE: LandingPageConfig = {
+  domainName: 'toptelecom.om',
+  heroTitle: 'Top Telecom Oman & Enterprise Mobile Hub',
+  heroSubtitle: 'Official Wholesale & Retail Distributor of Global Smartphones, 5G Devices & Microelectronics',
+  heroTagline: 'Serving Oman Businesses, Telecom Operators & Consumers with Certified Technology & Nationwide Delivery',
+  heroBadge: 'Sultanate of Oman • CR 1374092 • 10,633+ Models',
+  aboutText: 'Top Telecom Oman is the Sultanate’s premier technology destination, offering an extensive catalog of 116+ worldwide smartphone brands, certified electronic components, high-speed telecom recharge, and B2B corporate supply. Built on reliability, genuine warranties, and technical excellence.',
+  servicesHighlights: [
+    { title: '116+ Smartphone Brands', desc: 'Direct access to 10,633+ certified smartphone models from Apple, Samsung, Xiaomi, Huawei, Honor, and global brands.', icon: 'Smartphone' },
+    { title: 'Telecom Oman Bill Pay', desc: 'Instant bill payments and recharge for Omantel, Ooredoo, Vodafone, Nama Electricity & Water.', icon: 'Zap' },
+    { title: 'B2B Wholesale & Quotations', desc: 'Competitive commercial pricing, custom enterprise tenders, and fast quotation delivery for corporate clients.', icon: 'Building2' },
+    { title: 'Precision Component Lab', desc: 'Microcontrollers, sensors, display assemblies, soldering stations, and specialized hardware.', icon: 'Cpu' }
+  ],
+  portfolioStats: [
+    { label: 'Smartphone Models', value: '10,633+' },
+    { label: 'Global Brands', value: '116' },
+    { label: 'Oman Retail Customers', value: '50,000+' },
+    { label: 'Nationwide Delivery', value: '11 Governorates' }
+  ],
+  companyHighlights: [
+    'Authorized Oman Distributor for Leading Global Mobile Brands',
+    'Integrated Omantel, Ooredoo & Vodafone Telecom Infrastructure',
+    'Same-Day Delivery in Muscat & Express Governorate Shipping',
+    'Official Oman 5% VAT Invoicing & 1-Year Certified Warranty'
+  ],
+  contactWhatsapp: '+96894301393',
+  contactAddress: 'Road No 6, Mabellah Sanaya, Muscat Governorate, Sultanate of Oman',
+  contactEmail: 'Eletrocnisrst@gmail.com',
+  enableVisitorShowcase: true,
+  hidePricesInShowcase: true, // "VISITOR LANDING PAGE SHOW CASE SEE ANYTHING BUT NOT ANY PRICE"
+  featuredModelIds: [1, 2, 3, 4, 5, 6, 7, 8],
+  blogPosts: [
+    {
+      id: 1,
+      title: 'Top Telecom Oman 5G Network Rollout: What It Means for Smartphones',
+      slug: 'oman-5g-network-rollout',
+      summary: 'An in-depth analysis of high-speed 5G connectivity expansion across Muscat, Salalah, and Sohar, and compatible mobile chipsets.',
+      content: 'As Oman accelerates its Vision 2040 digital transformation, 5G network coverage has reached over 88% of populated areas across the Sultanate. Leading telecom operators Omantel, Ooredoo, and Vodafone have activated massive MIMO base stations delivering gigabit downlink speeds. To leverage this infrastructure, smartphones equipped with modern Sub-6GHz and mmWave modems (such as Qualcomm Snapdragon X70 and MediaTek Dimensity 9300) ensure ultra-low latency gaming, high-definition VoLTE calls, and seamless enterprise cloud access. At Top Telecom Oman, all our mobile stock is verified for regional band compatibility (n78, n41, n1, n3).',
+      author: 'Eng. Tariq Al-Balushi (Top Telecom Oman)',
+      date: '2024-10-10',
+      category: 'Telecom & 5G',
+      image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
+      tags: ['5G Oman', 'Omantel', 'Ooredoo', 'Snapdragon', 'Top Telecom'],
+      readTime: '4 min read',
+      published: true
+    },
+    {
+      id: 2,
+      title: 'Prolonging Smartphone Battery Health in Arabian Gulf High Temperatures',
+      slug: 'battery-health-gulf-climate',
+      summary: 'Practical guidelines to preserve Li-Ion and Li-Po batteries in summer temperatures exceeding 45°C.',
+      content: 'Ambient temperatures in Oman frequently exceed 40°C during peak summer months, posing significant stress on lithium polymer smartphone batteries. Lithium degradation accelerates when cells remain at 100% state-of-charge while exposed to heat. We recommend: 1) Utilizing 80% charge limits when available in iOS or Android settings; 2) Avoiding rapid wireless charging while driving in vehicles directly exposed to sun; 3) Removing heavy thermal insulating phone cases during intensive tasks; and 4) Replacing batteries at certified service centers when maximum capacity drops below 80%.',
+      author: 'RST Certified Electronics Lab',
+      date: '2024-09-28',
+      category: 'Maintenance & Care',
+      image: 'https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80',
+      tags: ['Battery Care', 'Heat Management', 'Mobile Tips', 'Oman Summer'],
+      readTime: '3 min read',
+      published: true
+    },
+    {
+      id: 3,
+      title: 'Understanding OLED, AMOLED vs TFT LCD Displays in Modern Handsets',
+      slug: 'oled-amoled-vs-lcd-displays',
+      summary: 'A technical comparison between display technologies: contrast ratios, refresh rates, and power consumption.',
+      content: 'Display panels represent the single most utilized component of modern smartphones. Super AMOLED and Dynamic LTPO OLED displays emit light per individual pixel, resulting in true infinite contrast ratios and zero power consumption for black pixels in dark mode. Furthermore, variable refresh rate technologies (1Hz to 120Hz) intelligently save battery life during static reading while delivering buttery smooth scrolling in apps. For wholesale buyers and repair specialists, verifying original OEM specifications versus cheap aftermarket reproductions is paramount for touch digitizer responsiveness and peak brightness.',
+      author: 'Hardware Engineering Team',
+      date: '2024-09-15',
+      category: 'Hardware Specs',
+      image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
+      tags: ['AMOLED', 'Displays', 'Hardware', 'Screen Guide'],
+      readTime: '5 min read',
+      published: true
+    }
+  ]
+};
+
+export const INITIAL_QUOTATIONS: Quotation[] = [
+  {
+    id: 1,
+    quote_no: 'QT-2024-001',
+    customer_id: 1,
+    customer_name: 'Sheikh Nasser Al-Kindi (VIP)',
+    customer_phone: '+968 9944 1122',
+    customer_email: 'nasser.kindi@omanroyal.om',
+    date: new Date().toISOString().slice(0, 10),
+    valid_until: new Date(Date.now() + 14 * 86400000).toISOString().slice(0, 10),
+    items: [
+      { id: 1, name: 'Apple iPhone 15 Pro Max 256GB Natural Titanium', price: 465.000, cost: 410.000, qty: 2, warranty: '1 Year Apple Official' },
+      { id: 2, name: 'Samsung Galaxy S24 Ultra 512GB Titanium Black', price: 435.000, cost: 380.000, qty: 1, warranty: '1 Year Samsung Gulf' },
+      { id: 3, name: 'Anker 65W GaN Fast Charger & Braided Type-C Cable', price: 16.500, cost: 11.000, qty: 3, isComponent: true }
+    ],
+    subtotal: 1414.500,
+    discount: 50.000,
+    vat: 68.225,
+    grand_total: 1432.725,
+    status: 'Approved',
+    notes: 'Official VIP tender quotation for corporate telecom handset refresh. Delivery to Al-Khuwair office.',
+    terms: 'Prices valid for 14 days. VAT @ 5% applicable. Includes free screen protector application.'
+  },
+  {
+    id: 2,
+    quote_no: 'QT-2024-002',
+    customer_id: 3,
+    customer_name: 'Al-Madina Engineering & Telecom LLC',
+    customer_phone: '+968 9112 3344',
+    customer_email: 'procurement@almadina-oman.com',
+    date: new Date().toISOString().slice(0, 10),
+    valid_until: new Date(Date.now() + 30 * 86400000).toISOString().slice(0, 10),
+    items: [
+      { id: 4, name: 'Xiaomi Redmi Note 13 Pro+ 5G 12GB/512GB', price: 155.000, cost: 128.000, qty: 5, warranty: '1 Year Official' },
+      { id: 5, name: 'ESP32-WROOM-32D Dual-Core MCU Module', price: 3.200, cost: 1.800, qty: 20, isComponent: true },
+      { id: 6, name: 'Omantel 5G Enterprise Router Outdoor CPE', price: 88.000, cost: 70.000, qty: 2 }
+    ],
+    subtotal: 1015.000,
+    discount: 30.000,
+    vat: 49.250,
+    grand_total: 1034.250,
+    status: 'Sent',
+    notes: 'Quotation for remote site monitoring IoT units and staff communication devices.',
+    terms: 'Payment terms: 30 days net upon delivery inspection.'
+  }
+];
+
+export const DEFAULT_CONFIG: BusinessConfig = {
+  business_name: 'TOP TELECOM OMAN & RST ELECTRONICS',
+  legal_name: 'TOP TELECOM & AL WAHA AL KHDRA TRADING LLC',
+  cr_no: '1374092',
+  address: 'Mabellah Sanaya, Road No 6, Muscat, Sultanate of Oman',
+  phone: '+968 9430 1393',
+  email: 'Eletrocnisrst@gmail.com',
+  currency: 'OMR',
+  currency_symbol: 'ر.ع.',
+  vatRate: 0.05,
+  vatEnabled: true,
+  decimalPlaces: 3,
+  invoice_prefix: 'RST',
+  lowStockAlert: 10,
+  telecomLowBalanceAlert: 20.000,
+  themePreset: 'emerald',
+  fontScale: 'normal',
+  tableDensity: 'balanced',
+  hideProfitInPOS: false,
+  hideCostPriceInPOS: false,
+  requireImeiForMobile: true,
+  soundAlerts: {
+    siren: true,
+    cashRegister: true,
+    scannerBeep: true,
+    buttonClick: true
+  },
+  creditAlertThresholdDays: 7,
+  widgetVisibility: {
+    emergencyBanner: true,
+    cashCalculator: true,
+    branchSales: true,
+    vipCustomers: true,
+    paymentBreakdown: true,
+    telecomAlerts: true,
+    pendingCheques: true,
+    weeklyChart: true,
+    recentInvoices: true
+  },
+  widgetPinned: {
+    emergencyBanner: true,
+    cashCalculator: true,
+    branchSales: true
+  },
+  landingPage: DEFAULT_LANDING_PAGE
+};
+
+const INITIAL_COMPONENTS: ElectronicComponent[] = [
+  {
+    id: 101,
+    sku: 'MCU-ESP32-WROOM',
+    name: 'ESP32-WROOM-32D Dual-Core MCU Module',
+    category: 'Microcontrollers',
+    subcategory: 'Wi-Fi & Bluetooth MCUs',
+    packageType: 'SMD Module (38-pin)',
+    voltage: '3.0V - 3.6V (5V DevKit)',
+    specs: {
+      'CPU': 'Xtensa Dual-Core 32-bit LX6 @ 240MHz',
+      'Flash Memory': '4MB SPI Flash',
+      'SRAM': '520 KB',
+      'Wireless': 'Wi-Fi 802.11 b/g/n + BLE 4.2',
+      'ADC Channels': '18 x 12-bit ADC',
+      'GPIO': '36 programmable pins'
+    },
+    pinoutSummary: 'Pin 1: GND, Pin 2: 3V3, Pin 3: EN, Pin 11: GPIO21 (SDA), Pin 14: GPIO22 (SCL), Pin 25: GPIO2 (Built-in LED)',
+    description: 'High-performance dual-core microcontroller with integrated Wi-Fi and Bluetooth. Ideal for IoT and automation.',
+    cost: 1.450,
+    price: 2.200,
+    stock: 45,
+    minStock: 10,
+    barcode: '8903001001018',
+    isPopular: true,
+    tags: ['iot', 'wifi', 'bluetooth', 'arduino', 'espressif']
+  },
+  {
+    id: 102,
+    sku: 'MCU-ATMEGA328P-PU',
+    name: 'ATmega328P-PU 8-bit AVR Microcontroller',
+    category: 'Microcontrollers',
+    subcategory: 'AVR Core',
+    packageType: 'DIP-28',
+    voltage: '1.8V - 5.5V',
+    specs: {
+      'Architecture': '8-bit AVR RISC @ 16MHz',
+      'Flash': '32 KB (with Bootloader)',
+      'EEPROM': '1 KB',
+      'SRAM': '2 KB',
+      'Timers': '2 x 8-bit, 1 x 16-bit'
+    },
+    pinoutSummary: 'Pin 1: RESET, Pin 7: VCC, Pin 8: GND, Pin 9-10: XTAL, Pin 14-19: Digital/PWM, Pin 23-28: Analog A0-A5',
+    description: 'The standard microcontroller chip powering the Arduino Uno. High reliability for embedded prototypes.',
+    cost: 0.950,
+    price: 1.650,
+    stock: 8,
+    minStock: 10,
+    barcode: '8903001001025',
+    isPopular: true,
+    tags: ['arduino', 'dip-28', 'avr', 'atmega']
+  },
+  {
+    id: 103,
+    sku: 'IC-NE555P-PREC',
+    name: 'NE555 Precision Timer IC',
+    category: 'Integrated Circuits',
+    subcategory: 'Analog Timers & Oscillators',
+    packageType: 'DIP-8',
+    voltage: '4.5V - 16V',
+    specs: {
+      'Operating Mode': 'Monostable / Astable Multivibrator',
+      'Max Frequency': '500 kHz',
+      'Max Output Current': '200 mA'
+    },
+    pinoutSummary: 'Pin 1: GND, Pin 2: TRIG, Pin 3: OUT, Pin 4: RESET, Pin 5: CTRL, Pin 6: THRES, Pin 7: DISCH, Pin 8: VCC',
+    description: 'Industry standard monolithic timing circuit capable of producing accurate time delays or oscillation.',
+    cost: 0.080,
+    price: 0.250,
+    stock: 180,
+    minStock: 25,
+    barcode: '8903001001032',
+    isPopular: true,
+    tags: ['timer', 'oscillator', 'dip-8', 'analog']
+  },
+  {
+    id: 105,
+    sku: 'SENS-DHT22-AM2302',
+    name: 'DHT22 / AM2302 Digital Temperature & Humidity Sensor',
+    category: 'Sensors',
+    subcategory: 'Environmental Sensors',
+    packageType: '4-Pin Moduled Package',
+    voltage: '3.3V - 6V DC',
+    specs: {
+      'Temp Range': '-40°C to +80°C (±0.5°C accuracy)',
+      'Humidity Range': '0% to 100% RH (±2% accuracy)'
+    },
+    pinoutSummary: 'Pin 1: VCC (3.3V-5V), Pin 2: DATA, Pin 3: NC, Pin 4: GND',
+    description: 'Calibrated digital output temperature and humidity sensor module with capacitive sensing element.',
+    cost: 1.100,
+    price: 1.850,
+    stock: 6,
+    minStock: 8,
+    barcode: '8903001001056',
+    isPopular: true,
+    tags: ['temperature', 'humidity', 'weather']
+  },
+  {
+    id: 115,
+    sku: 'CCTV-CAM-4K-IP',
+    name: 'Hikvision 4K 8MP PoE ColorVu Dome Camera',
+    category: 'CCTV & Accessories',
+    subcategory: 'Security Surveillance',
+    packageType: 'IP67 Metal Turret',
+    voltage: '12V DC / PoE (802.3af)',
+    specs: {
+      'Resolution': '3840 x 2160 @ 20fps',
+      'Night Vision': 'ColorVu 24/7 Full Color (30m)',
+      'Audio': 'Built-in microphone',
+      'Storage': 'MicroSD up to 256GB'
+    },
+    pinoutSummary: 'RJ45 PoE 10/100M Ethernet + 12V Coaxial Power DC Jack',
+    description: 'High-security color night-vision IP dome camera. Requires professional mounting & termination service.',
+    cost: 22.500,
+    price: 34.000,
+    stock: 12,
+    minStock: 3,
+    barcode: '8903001001155',
+    isPopular: true,
+    tags: ['cctv', 'surveillance', 'hikvision', 'camera', 'security']
+  }
+];
+
+const INITIAL_PRODUCTS: Product[] = [
+  {
+    id: 1,
+    sku: 'PHN-APL-IP15P-256',
+    name: 'Apple iPhone 15 Pro (256GB - Natural Titanium)',
+    brand: 'Apple',
+    category: 'Smartphones & Devices',
+    cost: 380.000,
+    price: 435.000,
+    wholesale: 415.000,
+    stock: 8,
+    lowstock: 3,
+    barcode: '8901234567890',
+    imei: '356789123456789',
+    serial: 'SN-IP15P-8921',
+    warranty: '1 Year Apple Official',
+    unit: 'pcs',
+    description: 'A17 Pro chip, Titanium design, 48MP main camera, USB-C 3.0',
+    active: true,
+    hasImei: true,
+    isComponent: false,
+    is_deleted: false,
+  },
+  {
+    id: 2,
+    sku: 'PHN-SAM-S24U-512',
+    name: 'Samsung Galaxy S24 Ultra (512GB - Titanium Gray)',
+    brand: 'Samsung',
+    category: 'Smartphones & Devices',
+    cost: 395.000,
+    price: 450.000,
+    wholesale: 430.000,
+    stock: 6,
+    lowstock: 2,
+    barcode: '8901234567891',
+    imei: '987654321123456',
+    serial: 'SN-S24U-4109',
+    warranty: '1 Year Samsung Gulf',
+    unit: 'pcs',
+    description: 'Snapdragon 8 Gen 3, S-Pen, 200MP Quad Telephoto',
+    active: true,
+    hasImei: true,
+    isComponent: false,
+    is_deleted: false,
+  }
+];
+
+const INITIAL_CUSTOMERS: Customer[] = [
+  { 
+    id: 1, 
+    name: 'Ahmed Al Balushi', 
+    phone: '+968 9988 7766', 
+    email: 'ahmed.b@gmail.com', 
+    address: 'Mabellah South, Muscat', 
+    balance: 0, 
+    creditDays: 0,
+    isVip: true,
+    loyaltyPoints: 340,
+    loyaltyTier: 'Gold',
+    is_deleted: false 
+  },
+  { 
+    id: 2, 
+    name: 'Salim Al Harthy', 
+    phone: '+968 9123 4567', 
+    email: 'salim.harthy@oman.om', 
+    address: 'Al Khoud, Seeb', 
+    balance: 45.500, 
+    creditDays: 9, // Trigger for 7+ days credit alert!
+    isVip: true,
+    loyaltyPoints: 210,
+    loyaltyTier: 'Silver',
+    is_deleted: false 
+  },
+  { 
+    id: 3, 
+    name: 'Dr. Tariq Al Maawali', 
+    phone: '+968 9456 7890', 
+    email: 'tariq.iot@squ.edu.om', 
+    address: 'SQU Tech Research Lab', 
+    balance: 85.000, 
+    creditDays: 14, // Trigger for 7+ days credit alert!
+    isVip: true,
+    loyaltyPoints: 520,
+    loyaltyTier: 'Gold',
+    is_deleted: false 
+  },
+  { 
+    id: 4, 
+    name: 'Fatima Al Lawati', 
+    phone: '+968 9765 4321', 
+    email: 'fatima@lawati.om', 
+    address: 'Muttrah, Muscat', 
+    balance: 0, 
+    creditDays: 0,
+    isVip: false,
+    loyaltyPoints: 95,
+    loyaltyTier: 'Bronze',
+    is_deleted: false 
+  },
+  { 
+    id: 5, 
+    name: 'Nasser Al Kindi', 
+    phone: '+968 9876 1122', 
+    email: 'nasser.kindi@oman.om', 
+    address: 'Nizwa Road, Oman', 
+    balance: 0, 
+    creditDays: 0,
+    isVip: true,
+    loyaltyPoints: 180,
+    loyaltyTier: 'Silver',
+    is_deleted: false 
+  }
+];
+
+const INITIAL_BRANCHES: Branch[] = [
+  { id: 1, name: 'Main Branch - Mabellah Sanaya', address: 'Road No 6, Mabellah, Muscat', phone: '+968 9430 1393', salesToday: 485.500, is_active: true },
+  { id: 2, name: 'Seeb Souq Branch', address: 'Seeb Corniche Market, Muscat', phone: '+968 9570 6628', salesToday: 215.200, is_active: true },
+  { id: 3, name: 'Salalah Industrial Branch', address: 'Sanaya, Salalah, Dhofar', phone: '+968 9234 5678', salesToday: 130.000, is_active: true },
+  { id: 4, name: 'Sohar Port Branch', address: 'Falaj Al Qabail, Sohar', phone: '+968 9345 6789', salesToday: 95.800, is_active: true }
+];
+
+const INITIAL_OPERATORS: TelecomOperator[] = [
+  { id: 1, name: 'Omantel', code: 'OMT', color: '#00a651', balance: 85.500, commissionType: 'percent', commissionValue: 2.5, lowAlertThreshold: 20.000, is_active: true },
+  { id: 2, name: 'Ooredoo Oman', code: 'OOD', color: '#ed1c24', balance: 62.000, commissionType: 'fixed', commissionValue: 0.050, lowAlertThreshold: 20.000, is_active: true },
+  { id: 3, name: 'Vodafone Oman', code: 'VDF', color: '#e60000', balance: 14.200, commissionType: 'percent', commissionValue: 2.0, lowAlertThreshold: 20.000, is_active: true }, // Low balance alert!
+  { id: 4, name: 'FRiENDi mobile', code: 'FRD', color: '#6f2c91', balance: 9.500, commissionType: 'fixed', commissionValue: 0.035, lowAlertThreshold: 15.000, is_active: true }, // Low balance alert!
+  { id: 5, name: 'Renna Mobile', code: 'RNN', color: '#f7931e', balance: 25.000, commissionType: 'fixed', commissionValue: 0.035, lowAlertThreshold: 15.000, is_active: true },
+  { id: 6, name: 'Awasr Telecom', code: 'AWS', color: '#00b0f0', balance: 110.000, commissionType: 'percent', commissionValue: 3.0, lowAlertThreshold: 25.000, is_active: true },
+];
+
+const INITIAL_LOYALTY_CARDS: LoyaltyCard[] = [
+  { id: 1, code: 'RST-VIP-GOLD-01', type: 'Membership', value: 10, discountType: 'percent', customerName: 'Ahmed Al Balushi', expiresAt: '2027-12-31', status: 'Active' },
+  { id: 2, code: 'RST-GIFT-50OMR', type: 'Gift', value: 50.000, discountType: 'fixed', customerName: 'Dr. Tariq Al Maawali', expiresAt: '2027-06-30', status: 'Active' },
+  { id: 3, code: 'RST-DISC-5PCT', type: 'Discount', value: 5, discountType: 'percent', customerName: 'Salim Al Harthy', expiresAt: '2027-08-31', status: 'Active' }
+];
+
+const INITIAL_DAMAGES: DamageEntry[] = [
+  { id: 1, date: '2026-10-09', itemName: 'DHT22 Sensor Module', sku: 'SENS-DHT22-AM2302', qty: 2, costLost: 2.200, reason: 'Broken pin in transit', recordedBy: 'admin' },
+  { id: 2, date: '2026-10-10', itemName: '0.96 OLED Display', sku: 'DISP-OLED-096-I2C', qty: 1, costLost: 1.200, reason: 'Cracked glass during testing', recordedBy: 'staff' }
+];
+
+const INITIAL_INVOICES: Invoice[] = [
+  {
+    id: 1,
+    invoice_no: 'RST-00001',
+    date: new Date().toLocaleDateString() + ' 10:30 AM',
+    customer: 'Ahmed Al Balushi',
+    customer_phone: '+968 9988 7766',
+    items: [
+      { id: 101, name: 'ESP32-WROOM-32D Dual-Core MCU Module', price: 2.200, cost: 1.450, qty: 5, isComponent: true },
+      { id: 115, name: 'Hikvision 4K 8MP ColorVu Dome Camera', price: 34.000, cost: 22.500, qty: 2, hasInstallationService: true, installationFee: 15.000, installationAdvancedPaid: 10.000, installationDueOnCompletion: 5.000 }
+    ],
+    subtotal: 79.000,
+    discount: 4.000,
+    vat: 3.750,
+    grand_total: 88.750,
+    payment: 'Split',
+    amountReceivedCash: 48.750,
+    amountReceivedBankSwift: 40.000,
+    amountReceivedBankTransfer: 0,
+    amountCreditLedger: 0,
+    bankSwiftMachineNo: 'SWIFT-BML-04',
+    profit: 26.250,
+    branch: 'Main Branch - Mabellah Sanaya',
+    operator: 'admin',
+    hasServiceInstallation: true,
+    serviceAdvancedPaid: 10.000,
+    serviceDueOnCompletion: 5.000,
+    serviceWorkStatus: 'In Progress',
+    serviceNotes: 'CCTV wiring in Mabellah villa front gate',
+    status: 'Paid'
+  },
+  {
+    id: 2,
+    invoice_no: 'RST-00002',
+    date: new Date().toLocaleDateString() + ' 02:15 PM',
+    customer: 'Salim Al Harthy',
+    customer_phone: '+968 9123 4567',
+    items: [
+      { id: 2, name: 'Samsung Galaxy S24 Ultra', price: 450.000, cost: 395.000, qty: 1 }
+    ],
+    subtotal: 450.000,
+    discount: 10.000,
+    vat: 22.000,
+    grand_total: 462.000,
+    payment: 'Bank',
+    amountReceivedCash: 0,
+    amountReceivedBankSwift: 0,
+    amountReceivedBankTransfer: 462.000,
+    bankTransferRefNo: 'MBOK-TX-9921',
+    profit: 45.000,
+    branch: 'Main Branch - Mabellah Sanaya',
+    operator: 'staff',
+    status: 'Paid'
+  }
+];
+
+const INITIAL_EMPLOYEES: Employee[] = [
+  { id: 1, code: 'EMP-001', name: 'Ahmed Al Balushi', designation: 'Senior Hardware Engineer', department: 'R&D / Technical', shiftCategory: 'Morning Shift', hourlyRate: 3.500, phone: '+968 9988 7766', email: 'ahmed.eng@rstelectronics.com', branch: 'Main Branch - Mabellah Sanaya', status: 'Active' },
+  { id: 2, code: 'EMP-002', name: 'Salim Al Harthy', designation: 'Sales & POS Supervisor', department: 'Sales & Counter', shiftCategory: 'Full Day Technical', hourlyRate: 2.800, phone: '+968 9123 4567', email: 'salim.pos@rstelectronics.com', branch: 'Main Branch - Mabellah Sanaya', status: 'Active' },
+  { id: 3, code: 'EMP-003', name: 'Tariq Al Maawali', designation: 'Embedded Systems Specialist', department: 'Engineering', shiftCategory: 'Morning Shift', hourlyRate: 4.200, phone: '+968 9456 7890', email: 'tariq.m@rstelectronics.com', branch: 'Seeb Souq Branch', status: 'Active' },
+  { id: 4, code: 'EMP-004', name: 'Fatima Al Lawati', designation: 'Accounts & Cashier Lead', department: 'Finance & Cashier', shiftCategory: 'Morning Shift', hourlyRate: 2.500, phone: '+968 9765 4321', email: 'fatima.fin@rstelectronics.com', branch: 'Main Branch - Mabellah Sanaya', status: 'Active' },
+  { id: 5, code: 'EMP-005', name: 'Nasser Al Kindi', designation: 'CCTV Installation Technician', department: 'Field Operations', shiftCategory: 'Evening Shift', hourlyRate: 2.750, phone: '+968 9876 1122', email: 'nasser.tech@rstelectronics.com', branch: 'Salalah Industrial Branch', status: 'Active' },
+  { id: 6, code: 'EMP-006', name: 'Rashid Al Saadi', designation: 'Stock & Logistics Officer', department: 'Inventory Warehouse', shiftCategory: 'Full Day Technical', hourlyRate: 2.400, phone: '+968 9345 6789', email: 'rashid.store@rstelectronics.com', branch: 'Sohar Port Branch', status: 'Active' }
+];
+
+const INITIAL_SHIFTS: AttendanceShiftCategory[] = [
+  { id: 1, name: 'Morning Shift', startTime: '08:00', endTime: '16:30', standardHours: 8, defaultBreakMinutes: 60, overtimeThresholdHours: 8.5, overtimeRateMultiplier: 1.5, color: '#10b981' },
+  { id: 2, name: 'Evening Shift', startTime: '16:00', endTime: '00:30', standardHours: 8, defaultBreakMinutes: 60, overtimeThresholdHours: 8.5, overtimeRateMultiplier: 1.5, color: '#3b82f6' },
+  { id: 3, name: 'Full Day Technical', startTime: '08:30', endTime: '18:00', standardHours: 9, defaultBreakMinutes: 60, overtimeThresholdHours: 9.5, overtimeRateMultiplier: 1.5, color: '#f59e0b' },
+  { id: 4, name: 'Part Time / Half Day', startTime: '09:00', endTime: '13:00', standardHours: 4, defaultBreakMinutes: 0, overtimeThresholdHours: 4.5, overtimeRateMultiplier: 1.25, color: '#8b5cf6' }
+];
+
+const INITIAL_ATTENDANCE_PERMISSIONS: AttendancePermissionRule[] = [
+  { id: 1, role: 'admin', canCheckInOut: true, canEditTimestamp: true, canApprovePayroll: true, canDeleteRecord: true, canConfigureShifts: true, canViewPayrollPay: true },
+  { id: 2, role: 'manager', canCheckInOut: true, canEditTimestamp: true, canApprovePayroll: true, canDeleteRecord: false, canConfigureShifts: true, canViewPayrollPay: true },
+  { id: 3, role: 'staff', canCheckInOut: true, canEditTimestamp: false, canApprovePayroll: false, canDeleteRecord: false, canConfigureShifts: false, canViewPayrollPay: false }
+];
+
+const INITIAL_ATTENDANCE_SETTINGS: AttendanceSettings = {
+  autoDeductBreak: true,
+  defaultBreakMinutes: 60,
+  standardWorkHoursPerDay: 8,
+  overtimeMultiplier: 1.5,
+  gracePeriodMinutes: 15,
+  visibleColumns: {
+    employeeCode: true,
+    branch: true,
+    shift: true,
+    checkIn: true,
+    checkOut: true,
+    breakTime: true,
+    totalHours: true,
+    overtime: true,
+    hourlyRate: true,
+    payrollPay: true,
+    approval: true,
+    actions: true
+  }
+};
+
+const INITIAL_ATTENDANCE_RECORDS: AttendanceRecord[] = [
+  {
+    id: 1,
+    employeeId: 1,
+    employeeCode: 'EMP-001',
+    employeeName: 'Ahmed Al Balushi',
+    branch: 'Main Branch - Mabellah Sanaya',
+    date: new Date().toISOString().slice(0, 10),
+    checkInTime: '08:00',
+    checkOutTime: undefined,
+    breakMinutes: 60,
+    totalHours: 0,
+    overtimeHours: 0,
+    shiftCategory: 'Morning Shift',
+    status: 'Checked In',
+    hourlyRate: 3.500,
+    calculatedPay: 0,
+    isApproved: false,
+    notes: 'Checked in on morning lab duty'
+  },
+  {
+    id: 2,
+    employeeId: 2,
+    employeeCode: 'EMP-002',
+    employeeName: 'Salim Al Harthy',
+    branch: 'Main Branch - Mabellah Sanaya',
+    date: new Date().toISOString().slice(0, 10),
+    checkInTime: '08:25',
+    checkOutTime: undefined,
+    breakMinutes: 60,
+    totalHours: 0,
+    overtimeHours: 0,
+    shiftCategory: 'Full Day Technical',
+    status: 'Checked In',
+    hourlyRate: 2.800,
+    calculatedPay: 0,
+    isApproved: false,
+    notes: 'Counter open & stock terminal active'
+  },
+  {
+    id: 3,
+    employeeId: 4,
+    employeeCode: 'EMP-004',
+    employeeName: 'Fatima Al Lawati',
+    branch: 'Main Branch - Mabellah Sanaya',
+    date: new Date().toISOString().slice(0, 10),
+    checkInTime: '07:55',
+    checkOutTime: undefined,
+    breakMinutes: 60,
+    totalHours: 0,
+    overtimeHours: 0,
+    shiftCategory: 'Morning Shift',
+    status: 'Checked In',
+    hourlyRate: 2.500,
+    calculatedPay: 0,
+    isApproved: false,
+    notes: 'Cashbook opening verified'
+  },
+  {
+    id: 4,
+    employeeId: 3,
+    employeeCode: 'EMP-003',
+    employeeName: 'Tariq Al Maawali',
+    branch: 'Seeb Souq Branch',
+    date: '2026-10-12',
+    checkInTime: '08:15',
+    checkOutTime: '17:45',
+    breakMinutes: 60,
+    totalHours: 8.5,
+    overtimeHours: 0.5,
+    shiftCategory: 'Morning Shift',
+    status: 'Overtime',
+    hourlyRate: 4.200,
+    calculatedPay: 38.850,
+    isApproved: true,
+    approvedBy: 'System Administrator',
+    notes: 'Embedded IoT prototype debugging & customer delivery'
+  },
+  {
+    id: 5,
+    employeeId: 5,
+    employeeCode: 'EMP-005',
+    employeeName: 'Nasser Al Kindi',
+    branch: 'Salalah Industrial Branch',
+    date: '2026-10-12',
+    checkInTime: '16:00',
+    checkOutTime: '01:00',
+    breakMinutes: 60,
+    totalHours: 8.0,
+    overtimeHours: 0,
+    shiftCategory: 'Evening Shift',
+    status: 'Completed',
+    hourlyRate: 2.750,
+    calculatedPay: 22.000,
+    isApproved: true,
+    approvedBy: 'System Administrator',
+    notes: 'CCTV installation at commercial villa completed'
+  }
+];
+
+const INITIAL_USERS: User[] = [
+  {
+    id: 1,
+    username: 'admin',
+    password: 'admin123',
+    fullname: 'System Administrator',
+    role: 'admin',
+    branch: 1,
+    branchName: 'Main Branch - Mabellah Sanaya',
+    phone: '+968 9430 1393',
+    email: 'admin@rstelectronics.com',
+    active: true,
+    permissions: {
+      canEditPrice: true,
+      canViewProfit: true,
+      canTriggerEmergency: true,
+      canStopEmergency: true,
+      canRunSql: true,
+      canManageUsers: true,
+      canApprovePayroll: true,
+      canDeleteInventory: true,
+      canAccessSettings: true
+    },
+    hiddenPages: [],
+    hiddenOptions: {
+      hideCostPrice: false,
+      hideProfitMargin: false,
+      hideSupplierBalances: false,
+      hideFinancialSummary: false,
+      hideDamagesCost: false
+    },
+    createdAt: '2024-01-01'
+  },
+  {
+    id: 2,
+    username: 'staff',
+    password: 'admin123',
+    fullname: 'Sales Representative',
+    role: 'staff',
+    branch: 1,
+    branchName: 'Main Branch - Mabellah Sanaya',
+    phone: '+968 9123 4567',
+    email: 'staff@rstelectronics.com',
+    active: true,
+    permissions: {
+      canEditPrice: false,
+      canViewProfit: false,
+      canTriggerEmergency: true,
+      canStopEmergency: false,
+      canRunSql: false,
+      canManageUsers: false,
+      canApprovePayroll: false,
+      canDeleteInventory: false,
+      canAccessSettings: false
+    },
+    hiddenPages: ['adminCenter', 'sql', 'accounts'],
+    hiddenOptions: {
+      hideCostPrice: true,
+      hideProfitMargin: true,
+      hideSupplierBalances: true,
+      hideFinancialSummary: true,
+      hideDamagesCost: true
+    },
+    createdAt: '2024-02-15'
+  },
+  {
+    id: 3,
+    username: 'manager_alrehab',
+    password: 'manager123',
+    fullname: 'Tariq Al-Balushi',
+    role: 'manager',
+    branch: 2,
+    branchName: 'Branch 2 - Al-Khuwair Commercial',
+    phone: '+968 9988 7766',
+    email: 'tariq@rstelectronics.com',
+    active: true,
+    permissions: {
+      canEditPrice: true,
+      canViewProfit: true,
+      canTriggerEmergency: true,
+      canStopEmergency: false,
+      canRunSql: false,
+      canManageUsers: false,
+      canApprovePayroll: true,
+      canDeleteInventory: false,
+      canAccessSettings: false
+    },
+    hiddenPages: ['sql'],
+    hiddenOptions: {
+      hideCostPrice: false,
+      hideProfitMargin: false,
+      hideSupplierBalances: false,
+      hideFinancialSummary: false,
+      hideDamagesCost: false
+    },
+    createdAt: '2024-03-01'
+  },
+  {
+    id: 4,
+    username: 'cashier1',
+    password: 'cashier123',
+    fullname: 'Ahmed Al-Maawali',
+    role: 'cashier',
+    branch: 1,
+    branchName: 'Main Branch - Mabellah Sanaya',
+    phone: '+968 9555 1234',
+    email: 'ahmed@rstelectronics.com',
+    active: true,
+    permissions: {
+      canEditPrice: false,
+      canViewProfit: false,
+      canTriggerEmergency: true,
+      canStopEmergency: false,
+      canRunSql: false,
+      canManageUsers: false,
+      canApprovePayroll: false,
+      canDeleteInventory: false,
+      canAccessSettings: false
+    },
+    hiddenPages: ['adminCenter', 'sql', 'accounts', 'inventory'],
+    hiddenOptions: {
+      hideCostPrice: true,
+      hideProfitMargin: true,
+      hideSupplierBalances: true,
+      hideFinancialSummary: true,
+      hideDamagesCost: true
+    },
+    createdAt: '2024-04-10'
+  }
+];
+
+class DatabaseManager {
+  public config: BusinessConfig;
+  public users: User[];
+  public quotations: Quotation[];
+  public components: ElectronicComponent[];
+  public products: Product[];
+  public customers: Customer[];
+  public invoices: Invoice[];
+  public telecomOperators: TelecomOperator[];
+  public telecomTx: TelecomTransaction[];
+  public branches: Branch[];
+  public loyaltyCards: LoyaltyCard[];
+  public damages: DamageEntry[];
+  public notifications: AppNotification[];
+  public auditLogs: AuditLog[];
+  public activeEmergency: EmergencyAlert | null;
+  public employees: Employee[];
+  public attendanceRecords: AttendanceRecord[];
+  public shifts: AttendanceShiftCategory[];
+  public attendancePermissions: AttendancePermissionRule[];
+  public attendanceSettings: AttendanceSettings;
+  public phoneBrands: PhoneBrand[] = [];
+  public phoneDevices: PhoneDevice[] = [];
+  private isPhoneCatalogLoaded = false;
+
+  // Real-time financial variables for Cash in Hand Calculator
+  public purchasedTotalToday = 145.000;
+  public expensesTotalToday = 28.500;
+  public returnsTotalToday = 8.000;
+  public pendingChequesCount = 3;
+  public pendingChequesAmount = 240.000;
+
+  constructor() {
+    this.config = this.load('rst_config', DEFAULT_CONFIG);
+    if (!this.config.landingPage) {
+      this.config.landingPage = DEFAULT_LANDING_PAGE;
+    }
+    this.users = this.load('rst_users', INITIAL_USERS);
+    this.quotations = this.load('rst_quotations', INITIAL_QUOTATIONS);
+    this.components = this.load('rst_components', INITIAL_COMPONENTS);
+    this.products = this.load('rst_products', INITIAL_PRODUCTS);
+    this.customers = this.load('rst_customers', INITIAL_CUSTOMERS);
+    this.invoices = this.load('rst_invoices', INITIAL_INVOICES);
+    this.branches = this.load('rst_branches', INITIAL_BRANCHES);
+    this.telecomOperators = this.load('rst_telecom_ops', INITIAL_OPERATORS);
+    this.telecomTx = this.load('rst_telecom_tx', []);
+    this.loyaltyCards = this.load('rst_loyalty_cards', INITIAL_LOYALTY_CARDS);
+    this.damages = this.load('rst_damages', INITIAL_DAMAGES);
+    this.employees = this.load('rst_employees', INITIAL_EMPLOYEES);
+    this.attendanceRecords = this.load('rst_attendance', INITIAL_ATTENDANCE_RECORDS);
+    this.shifts = this.load('rst_shifts', INITIAL_SHIFTS);
+    this.attendancePermissions = this.load('rst_attendance_perms', INITIAL_ATTENDANCE_PERMISSIONS);
+    this.attendanceSettings = this.load('rst_attendance_settings', INITIAL_ATTENDANCE_SETTINGS);
+    this.auditLogs = this.load('rst_audit_logs', [
+      { id: 1, user: 'admin', action: 'System started with Emergency Siren & Cash Calculator', targetType: 'system', targetId: 'boot', time: new Date().toLocaleTimeString(), branch: 'Main Branch' },
+      { id: 2, user: 'admin', action: 'Created Tax Invoice RST-00001 with CCTV installation', targetType: 'invoice', targetId: 'RST-00001', time: new Date().toLocaleTimeString(), branch: 'Main Branch' }
+    ]);
+    this.notifications = this.load('rst_notifications', [
+      {
+        id: 1,
+        title: 'Emergency Siren Alert Ready',
+        body: 'Audio alert siren and admin stop authorization online.',
+        type: 'alert',
+        time: new Date().toLocaleTimeString(),
+        read: false
+      }
+    ]);
+
+    this.activeEmergency = this.load('rst_emergency', null);
+    this.initAlaSql();
+    this.loadPhoneCatalog();
+  }
+
+  private load<T>(key: string, defaultVal: T): T {
+    try {
+      const data = localStorage.getItem(key);
+      return data ? JSON.parse(data) : defaultVal;
+    } catch {
+      return defaultVal;
+    }
+  }
+
+  public async loadPhoneCatalog(): Promise<{ brands: PhoneBrand[]; devices: PhoneDevice[] }> {
+    if (this.isPhoneCatalogLoaded && this.phoneBrands.length > 0) {
+      return { brands: this.phoneBrands, devices: this.phoneDevices };
+    }
+    try {
+      const [brandsRes, devicesRes] = await Promise.all([
+        fetch('/data/phone_brands.json'),
+        fetch('/data/phone_devices.json')
+      ]);
+      if (brandsRes.ok && devicesRes.ok) {
+        this.phoneBrands = await brandsRes.json();
+        this.phoneDevices = await devicesRes.json();
+        this.isPhoneCatalogLoaded = true;
+        this.syncAlaSqlTables();
+      }
+    } catch (err) {
+      console.warn('Could not load phone catalog data:', err);
+    }
+    return { brands: this.phoneBrands, devices: this.phoneDevices };
+  }
+
+  public persist() {
+    localStorage.setItem('rst_config', JSON.stringify(this.config));
+    localStorage.setItem('rst_users', JSON.stringify(this.users));
+    localStorage.setItem('rst_quotations', JSON.stringify(this.quotations));
+    localStorage.setItem('rst_components', JSON.stringify(this.components));
+    localStorage.setItem('rst_products', JSON.stringify(this.products));
+    localStorage.setItem('rst_customers', JSON.stringify(this.customers));
+    localStorage.setItem('rst_invoices', JSON.stringify(this.invoices));
+    localStorage.setItem('rst_branches', JSON.stringify(this.branches));
+    localStorage.setItem('rst_telecom_ops', JSON.stringify(this.telecomOperators));
+    localStorage.setItem('rst_telecom_tx', JSON.stringify(this.telecomTx));
+    localStorage.setItem('rst_loyalty_cards', JSON.stringify(this.loyaltyCards));
+    localStorage.setItem('rst_damages', JSON.stringify(this.damages));
+    localStorage.setItem('rst_employees', JSON.stringify(this.employees));
+    localStorage.setItem('rst_attendance', JSON.stringify(this.attendanceRecords));
+    localStorage.setItem('rst_shifts', JSON.stringify(this.shifts));
+    localStorage.setItem('rst_attendance_perms', JSON.stringify(this.attendancePermissions));
+    localStorage.setItem('rst_attendance_settings', JSON.stringify(this.attendanceSettings));
+    localStorage.setItem('rst_audit_logs', JSON.stringify(this.auditLogs));
+    localStorage.setItem('rst_notifications', JSON.stringify(this.notifications));
+    localStorage.setItem('rst_emergency', JSON.stringify(this.activeEmergency));
+    this.syncAlaSqlTables();
+  }
+
+  public initAlaSql() {
+    try {
+      alasql('CREATE DATABASE IF NOT EXISTS rst_db');
+      alasql('USE rst_db');
+      this.syncAlaSqlTables();
+    } catch (err) {
+      console.warn('AlaSQL init error:', err);
+    }
+  }
+
+  public syncAlaSqlTables() {
+    try {
+      alasql.tables.users = { data: JSON.parse(JSON.stringify(this.users)) };
+      alasql.tables.config = { data: [JSON.parse(JSON.stringify(this.config))] };
+      alasql.tables.quotations = { data: JSON.parse(JSON.stringify(this.quotations)) };
+      alasql.tables.components = { data: JSON.parse(JSON.stringify(this.components)) };
+      alasql.tables.products = { data: JSON.parse(JSON.stringify(this.products)) };
+      alasql.tables.customers = { data: JSON.parse(JSON.stringify(this.customers)) };
+      alasql.tables.invoices = { data: JSON.parse(JSON.stringify(this.invoices)) };
+      alasql.tables.telecom_operators = { data: JSON.parse(JSON.stringify(this.telecomOperators)) };
+      alasql.tables.telecom_tx = { data: JSON.parse(JSON.stringify(this.telecomTx)) };
+      alasql.tables.branches = { data: JSON.parse(JSON.stringify(this.branches)) };
+      alasql.tables.employees = { data: JSON.parse(JSON.stringify(this.employees)) };
+      alasql.tables.attendance = { data: JSON.parse(JSON.stringify(this.attendanceRecords)) };
+      alasql.tables.shifts = { data: JSON.parse(JSON.stringify(this.shifts)) };
+      alasql.tables.attendance_rules = { data: JSON.parse(JSON.stringify(this.attendancePermissions)) };
+      if (this.phoneBrands.length > 0) {
+        alasql.tables.phone_brands = { data: this.phoneBrands };
+      }
+      if (this.phoneDevices.length > 0) {
+        alasql.tables.phone_devices = { data: this.phoneDevices };
+      }
+    } catch (err) {
+      console.warn('Sync tables error:', err);
+    }
+  }
+
+  public executeSql(sqlStatement: string): { 
+    success: boolean; 
+    data: Record<string, unknown>[]; 
+    columns: string[]; 
+    message?: string; 
+    executionTimeMs: number; 
+  } {
+    const startTime = performance.now();
+    try {
+      this.syncAlaSqlTables();
+      const result = alasql(sqlStatement);
+      const executionTimeMs = Math.round(performance.now() - startTime);
+
+      let data: Record<string, unknown>[] = [];
+      if (Array.isArray(result)) {
+        data = result;
+      } else if (typeof result === 'object' && result !== null) {
+        data = [result as Record<string, unknown>];
+      }
+
+      const upper = sqlStatement.trim().toUpperCase();
+      if (upper.startsWith('INSERT') || upper.startsWith('UPDATE') || upper.startsWith('DELETE')) {
+        if (alasql.tables.users?.data) this.users = alasql.tables.users.data as User[];
+        if (alasql.tables.config?.data?.[0]) this.config = alasql.tables.config.data[0] as BusinessConfig;
+        if (alasql.tables.quotations?.data) this.quotations = alasql.tables.quotations.data as Quotation[];
+        if (alasql.tables.components?.data) this.components = alasql.tables.components.data as ElectronicComponent[];
+        if (alasql.tables.products?.data) this.products = alasql.tables.products.data as Product[];
+        if (alasql.tables.customers?.data) this.customers = alasql.tables.customers.data as Customer[];
+        if (alasql.tables.invoices?.data) this.invoices = alasql.tables.invoices.data as Invoice[];
+        if (alasql.tables.employees?.data) this.employees = alasql.tables.employees.data as Employee[];
+        if (alasql.tables.attendance?.data) this.attendanceRecords = alasql.tables.attendance.data as AttendanceRecord[];
+        if (alasql.tables.shifts?.data) this.shifts = alasql.tables.shifts.data as AttendanceShiftCategory[];
+        if (alasql.tables.attendance_rules?.data) this.attendancePermissions = alasql.tables.attendance_rules.data as AttendancePermissionRule[];
+        this.persist();
+      }
+
+      const columns = data.length > 0 ? Object.keys(data[0]) : [];
+      return {
+        success: true,
+        data,
+        columns,
+        message: `Success: ${data.length} row(s) returned`,
+        executionTimeMs
+      };
+    } catch (err: unknown) {
+      const executionTimeMs = Math.round(performance.now() - startTime);
+      return {
+        success: false,
+        data: [],
+        columns: [],
+        message: err instanceof Error ? err.message : String(err),
+        executionTimeMs
+      };
+    }
+  }
+
+  /**
+   * Cash in Hand Calculator:
+   * AT TOTAL SALES + SERVICED - (PURCHASED + EXPENSES) - (BANK SWIFT + BANK TRANSFER + DEPOSIT MONEY) - RETURN = CASH IN HAND NOW
+   */
+  public calculateCashInHand() {
+    const totalSalesAndService = this.invoices.reduce((sum, i) => sum + i.grand_total, 0);
+    const servicesAdvanced = this.invoices.reduce((sum, i) => sum + (i.serviceAdvancedPaid || 0), 0);
+    const bankSwiftTotal = this.invoices.reduce((sum, i) => sum + (i.amountReceivedBankSwift || (i.payment === 'Card' ? i.grand_total : 0)), 0);
+    const bankTransferTotal = this.invoices.reduce((sum, i) => sum + (i.amountReceivedBankTransfer || (i.payment === 'Bank' ? i.grand_total : 0)), 0);
+    const creditLedgerTotal = this.invoices.reduce((sum, i) => sum + (i.amountCreditLedger || (i.payment === 'Due' ? i.grand_total : 0)), 0);
+    
+    // Formula calculation
+    const totalInflow = totalSalesAndService + servicesAdvanced;
+    const totalOutflow = (this.purchasedTotalToday + this.expensesTotalToday) + (bankSwiftTotal + bankTransferTotal) + this.returnsTotalToday;
+    const cashInHandNow = Math.max(0, totalInflow - totalOutflow);
+
+    return {
+      totalSalesAndService,
+      servicesAdvanced,
+      purchasedTotalToday: this.purchasedTotalToday,
+      expensesTotalToday: this.expensesTotalToday,
+      bankSwiftTotal,
+      bankTransferTotal,
+      creditLedgerTotal,
+      returnsTotalToday: this.returnsTotalToday,
+      cashInHandNow,
+      netCashInHand: cashInHandNow
+    };
+  }
+
+  // Emergency Siren Alert Trigger
+  public triggerEmergencyAlert(title: string, message: string, severity: EmergencyAlert['severity'] = 'critical') {
+    this.activeEmergency = {
+      id: Date.now(),
+      active: true,
+      title,
+      message,
+      type: 'emergency_siren',
+      severity,
+      timestamp: new Date().toLocaleTimeString()
+    };
+    this.persist();
+    SoundEngine.playEmergencySiren(true);
+    this.addNotification({
+      title: `🚨 EMERGENCY ALERT: ${title}`,
+      body: message,
+      type: 'alert'
+    });
+    this.logAudit('EMERGENCY SIREN TRIGGERED: ' + title, 'alert', 'siren');
+  }
+
+  // Admin stops the emergency alert
+  public stopEmergencyAlert(adminName: string) {
+    if (this.activeEmergency) {
+      this.activeEmergency.active = false;
+      this.activeEmergency.stoppedBy = adminName;
+    }
+    SoundEngine.stopEmergencySiren();
+    this.persist();
+    this.logAudit(`EMERGENCY ALERT STOPPED BY ADMIN: ${adminName}`, 'alert', 'siren_stopped');
+  }
+
+  public logAudit(action: string, targetType: string, targetId: any, user = 'admin', branch = 'Main Branch') {
+    this.auditLogs.unshift({
+      id: Date.now(),
+      user,
+      action,
+      targetType,
+      targetId,
+      time: new Date().toLocaleTimeString(),
+      branch
+    });
+    if (this.auditLogs.length > 500) this.auditLogs = this.auditLogs.slice(0, 500);
+    this.persist();
+  }
+
+  public addDamageEntry(entry: Omit<DamageEntry, 'id'>) {
+    this.damages.unshift({
+      ...entry,
+      id: Date.now()
+    });
+    this.logAudit(`Damage recorded: ${entry.itemName} (${entry.qty} pcs) - ${entry.reason}`, 'damage', entry.sku);
+    this.persist();
+  }
+
+  public addLoyaltyCard(card: Omit<LoyaltyCard, 'id'>) {
+    this.loyaltyCards.unshift({
+      ...card,
+      id: Date.now()
+    });
+    this.persist();
+  }
+
+  public toggleWidget(widgetKey: string) {
+    if (!this.config.widgetVisibility) this.config.widgetVisibility = {};
+    this.config.widgetVisibility[widgetKey] = !this.config.widgetVisibility[widgetKey];
+    this.persist();
+  }
+
+  public togglePinWidget(widgetKey: string) {
+    if (!this.config.widgetPinned) this.config.widgetPinned = {};
+    this.config.widgetPinned[widgetKey] = !this.config.widgetPinned[widgetKey];
+    this.persist();
+  }
+
+  public restoreAllWidgets() {
+    if (!this.config.widgetVisibility) this.config.widgetVisibility = {};
+    Object.keys(this.config.widgetVisibility).forEach(k => {
+      this.config.widgetVisibility![k] = true;
+    });
+    this.persist();
+  }
+
+  public addComponent(comp: Omit<ElectronicComponent, 'id'>) {
+    const id = this.components.length ? Math.max(...this.components.map(c => c.id)) + 1 : 101;
+    const newComp: ElectronicComponent = {
+      ...comp,
+      id,
+      barcode: comp.barcode || generateEAN13('890')
+    };
+    this.components.unshift(newComp);
+    this.logAudit(`Added component: ${comp.name}`, 'component', comp.sku);
+    this.persist();
+    return newComp;
+  }
+
+  public addPhoneToInventory(
+    device: PhoneDevice, 
+    options?: { price?: number; cost?: number; stock?: number; warranty?: string }
+  ): Product {
+    const nextId = this.products.length ? Math.max(...this.products.map(p => p.id)) + 1 : 1;
+    const barcode = generateEAN13('890');
+    const imei = generateIMEI('35');
+    const cleanBrand = device.brand_name || 'Generic';
+    const estimatedPrice = options?.price || (device.priceEstimate || 120.000);
+    const estimatedCost = options?.cost || (estimatedPrice * 0.82);
+
+    const newProduct: Product = {
+      id: nextId,
+      sku: `PH-${cleanBrand.slice(0, 3).toUpperCase()}-${device.id}`,
+      name: `${device.brand_name} ${device.name}`,
+      brand: device.brand_name,
+      category: 'Mobile Electronics',
+      cost: Number(estimatedCost.toFixed(3)),
+      price: Number(estimatedPrice.toFixed(3)),
+      stock: options?.stock || 5,
+      lowstock: 2,
+      barcode,
+      imei,
+      warranty: options?.warranty || '1 Year Official Warranty',
+      unit: 'pcs',
+      description: `Released: ${device.released_at || 'N/A'} | OS: ${device.os || 'N/A'} | Storage: ${device.storage || 'N/A'} | RAM: ${device.ram || 'N/A'} | Battery: ${device.battery || 'N/A'}`,
+      active: true,
+      hasImei: true,
+      isComponent: false,
+      is_deleted: false
+    };
+
+    this.products.unshift(newProduct);
+    this.logAudit(`Imported mobile phone to inventory: ${newProduct.name} (IMEI: ${imei})`, 'product', newProduct.sku);
+    this.addNotification({
+      title: `Mobile Phone Added: ${newProduct.name}`,
+      body: `IMEI: ${imei} | Barcode: ${barcode} | Stock: ${newProduct.stock} units`,
+      type: 'stock'
+    });
+    this.persist();
+    return newProduct;
+  }
+
+  public createInvoice(invData: Omit<Invoice, 'id' | 'invoice_no'>): Invoice {
+    const nextNum = this.invoices.length + 1;
+    const invoice_no = `${this.config.invoice_prefix}-${String(nextNum).padStart(5, '0')}`;
+    const invoice: Invoice = {
+      ...invData,
+      id: nextNum,
+      invoice_no
+    };
+
+    // Deduct stock
+    invoice.items.forEach(item => {
+      if (item.isComponent) {
+        const comp = this.components.find(c => c.id === item.id);
+        if (comp) comp.stock = Math.max(0, comp.stock - item.qty);
+      } else {
+        const prod = this.products.find(p => p.id === item.id);
+        if (prod) prod.stock = Math.max(0, prod.stock - item.qty);
+      }
+    });
+
+    this.invoices.unshift(invoice);
+
+    // Update branch sales
+    const b = this.branches.find(br => br.name === invoice.branch);
+    if (b) {
+      b.salesToday += invoice.grand_total;
+    }
+
+    this.addNotification({
+      title: `Invoice ${invoice_no} Generated`,
+      body: `Customer: ${invoice.customer} | Total: ${invoice.grand_total.toFixed(3)} ${this.config.currency}`,
+      type: 'sale'
+    });
+
+    this.logAudit(`Invoice ${invoice_no} created for ${invoice.grand_total.toFixed(3)} ${this.config.currency}`, 'invoice', invoice_no);
+    this.persist();
+    return invoice;
+  }
+
+  public addNotification(n: { title: string; body: string; type: AppNotification['type'] }) {
+    const newNotif: AppNotification = {
+      id: Date.now(),
+      title: n.title,
+      body: n.body,
+      type: n.type,
+      time: new Date().toLocaleTimeString(),
+      read: false
+    };
+    this.notifications.unshift(newNotif);
+    if (this.notifications.length > 100) this.notifications = this.notifications.slice(0, 100);
+    this.persist();
+  }
+
+  public rechargeTelecom(operatorId: number, amount: number, phone?: string): TelecomTransaction | null {
+    const op = this.telecomOperators.find(o => o.id === operatorId);
+    if (!op || op.balance < amount) return null;
+
+    const profit = op.commissionType === 'fixed' 
+      ? op.commissionValue 
+      : (amount * op.commissionValue) / 100;
+
+    const prevBal = op.balance;
+    op.balance -= amount;
+
+    const tx: TelecomTransaction = {
+      id: Date.now(),
+      operatorId: op.id,
+      operatorName: op.name,
+      phoneNumber: phone,
+      amount,
+      profit,
+      previousBalance: prevBal,
+      newBalance: op.balance,
+      date: new Date().toISOString().slice(0, 10),
+      time: new Date().toLocaleTimeString(),
+      operator: 'admin'
+    };
+
+    this.telecomTx.unshift(tx);
+    this.persist();
+    return tx;
+  }
+
+  public addTelecomBalance(operatorId: number, amount: number) {
+    const op = this.telecomOperators.find(o => o.id === operatorId);
+    if (op) {
+      op.balance += amount;
+      this.persist();
+    }
+  }
+
+  // Helper: Calculate total working hours, overtime hours, and payroll pay
+  public calculateWorkingHoursAndPay(
+    checkInTime: string,
+    checkOutTime?: string,
+    breakMinutes = 60,
+    shiftCategory = 'Morning Shift',
+    hourlyRate = 3.000
+  ): {
+    totalHours: number;
+    overtimeHours: number;
+    calculatedPay: number;
+    status: AttendanceRecord['status'];
+  } {
+    if (!checkOutTime) {
+      return {
+        totalHours: 0,
+        overtimeHours: 0,
+        calculatedPay: 0,
+        status: 'Checked In'
+      };
+    }
+
+    const parseTimeToMinutes = (t: string) => {
+      const match = t.match(/(\d{1,2}):(\d{2})/);
+      if (!match) return 0;
+      return parseInt(match[1], 10) * 60 + parseInt(match[2], 10);
+    };
+
+    const inMin = parseTimeToMinutes(checkInTime);
+    let outMin = parseTimeToMinutes(checkOutTime);
+    if (outMin < inMin) {
+      outMin += 24 * 60; // Crosses midnight
+    }
+
+    const grossMin = Math.max(0, outMin - inMin);
+    const effBreak = Math.max(0, breakMinutes);
+    const netMin = Math.max(0, grossMin - effBreak);
+    const totalHours = Math.round((netMin / 60) * 100) / 100;
+
+    const shift = this.shifts.find(s => s.name === shiftCategory);
+    const standardHours = shift ? shift.standardHours : (this.attendanceSettings?.standardWorkHoursPerDay || 8);
+    const overtimeThreshold = shift ? shift.overtimeThresholdHours : standardHours;
+    const overtimeMultiplier = shift ? shift.overtimeRateMultiplier : (this.attendanceSettings?.overtimeMultiplier || 1.5);
+
+    let overtimeHours = 0;
+    if (totalHours > overtimeThreshold) {
+      overtimeHours = Math.round((totalHours - overtimeThreshold) * 100) / 100;
+    }
+
+    const regularHours = Math.max(0, totalHours - overtimeHours);
+    const pay = (regularHours * hourlyRate) + (overtimeHours * hourlyRate * overtimeMultiplier);
+    const calculatedPay = Math.round(pay * 1000) / 1000;
+
+    let status: AttendanceRecord['status'] = 'Completed';
+    if (overtimeHours > 0) {
+      status = 'Overtime';
+    } else if (totalHours < (standardHours / 2)) {
+      status = 'Half Day';
+    }
+
+    return {
+      totalHours,
+      overtimeHours,
+      calculatedPay,
+      status
+    };
+  }
+
+  // Check In Employee
+  public checkInEmployee(
+    employeeId: number,
+    options?: {
+      checkInTime?: string;
+      shiftCategory?: string;
+      branch?: string;
+      notes?: string;
+    }
+  ): AttendanceRecord | null {
+    const emp = this.employees.find(e => e.id === employeeId);
+    if (!emp) return null;
+
+    const now = new Date();
+    const dateStr = now.toISOString().slice(0, 10);
+    const timeStr = options?.checkInTime || now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+    const shiftCat = options?.shiftCategory || emp.shiftCategory || 'Morning Shift';
+    const branch = options?.branch || emp.branch || 'Main Branch - Mabellah Sanaya';
+
+    // Check if already checked in today without checkout
+    const existing = this.attendanceRecords.find(
+      r => r.employeeId === employeeId && r.date === dateStr && !r.checkOutTime
+    );
+
+    if (existing) {
+      return existing;
+    }
+
+    const shift = this.shifts.find(s => s.name === shiftCat);
+    const breakMin = shift ? shift.defaultBreakMinutes : (this.attendanceSettings?.defaultBreakMinutes || 60);
+
+    const nextId = this.attendanceRecords.length ? Math.max(...this.attendanceRecords.map(r => r.id)) + 1 : 1;
+    const newRecord: AttendanceRecord = {
+      id: nextId,
+      employeeId: emp.id,
+      employeeCode: emp.code,
+      employeeName: emp.name,
+      branch,
+      date: dateStr,
+      checkInTime: timeStr,
+      checkOutTime: undefined,
+      breakMinutes: breakMin,
+      totalHours: 0,
+      overtimeHours: 0,
+      shiftCategory: shiftCat,
+      status: 'Checked In',
+      hourlyRate: emp.hourlyRate || 3.000,
+      calculatedPay: 0,
+      isApproved: false,
+      notes: options?.notes || `Manager check-in recorded for ${emp.name}`
+    };
+
+    this.attendanceRecords.unshift(newRecord);
+    this.logAudit(`Employee Check-In: ${emp.name} (${emp.code}) at ${timeStr}`, 'attendance', newRecord.id, 'manager', branch);
+    this.addNotification({
+      title: `Employee Checked In: ${emp.name}`,
+      body: `Shift: ${shiftCat} | Time: ${timeStr} | Branch: ${branch}`,
+      type: 'system'
+    });
+    this.persist();
+    return newRecord;
+  }
+
+  // Check Out Employee
+  public checkOutEmployee(
+    recordId: number,
+    options?: {
+      checkOutTime?: string;
+      breakMinutes?: number;
+      notes?: string;
+    }
+  ): AttendanceRecord | null {
+    const record = this.attendanceRecords.find(r => r.id === recordId);
+    if (!record) return null;
+
+    const now = new Date();
+    const timeStr = options?.checkOutTime || now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+    const breakMin = options?.breakMinutes !== undefined ? options.breakMinutes : record.breakMinutes;
+
+    const calc = this.calculateWorkingHoursAndPay(
+      record.checkInTime,
+      timeStr,
+      breakMin,
+      record.shiftCategory,
+      record.hourlyRate
+    );
+
+    record.checkOutTime = timeStr;
+    record.breakMinutes = breakMin;
+    record.totalHours = calc.totalHours;
+    record.overtimeHours = calc.overtimeHours;
+    record.calculatedPay = calc.calculatedPay;
+    record.status = calc.status;
+    if (options?.notes) {
+      record.notes = (record.notes ? record.notes + ' | ' : '') + options.notes;
+    }
+
+    this.logAudit(
+      `Employee Check-Out: ${record.employeeName} (${record.totalHours} hrs, ${record.calculatedPay.toFixed(3)} OMR)`,
+      'attendance',
+      record.id,
+      'manager',
+      record.branch
+    );
+    this.addNotification({
+      title: `Employee Checked Out: ${record.employeeName}`,
+      body: `Worked: ${record.totalHours} hrs | Pay: ${record.calculatedPay.toFixed(3)} OMR`,
+      type: 'system'
+    });
+
+    this.persist();
+    return record;
+  }
+
+  // Save / Update Attendance Record (manual edit or timestamp adjustment)
+  public saveAttendanceRecord(rec: Partial<AttendanceRecord> & { employeeId: number }): AttendanceRecord {
+    const emp = this.employees.find(e => e.id === rec.employeeId);
+    const empName = emp ? emp.name : rec.employeeName || 'Staff Member';
+    const empCode = emp ? emp.code : rec.employeeCode || 'EMP-000';
+    const hourlyRate = rec.hourlyRate || emp?.hourlyRate || 3.000;
+    const shiftCat = rec.shiftCategory || emp?.shiftCategory || 'Morning Shift';
+    const breakMin = rec.breakMinutes !== undefined ? rec.breakMinutes : 60;
+
+    let totalHours = rec.totalHours || 0;
+    let overtimeHours = rec.overtimeHours || 0;
+    let calculatedPay = rec.calculatedPay || 0;
+    let status = rec.status || 'Checked In';
+
+    if (rec.checkInTime && rec.checkOutTime) {
+      const calc = this.calculateWorkingHoursAndPay(
+        rec.checkInTime,
+        rec.checkOutTime,
+        breakMin,
+        shiftCat,
+        hourlyRate
+      );
+      totalHours = calc.totalHours;
+      overtimeHours = calc.overtimeHours;
+      calculatedPay = calc.calculatedPay;
+      status = calc.status;
+    }
+
+    let savedRecord: AttendanceRecord;
+    if (rec.id) {
+      const idx = this.attendanceRecords.findIndex(r => r.id === rec.id);
+      if (idx !== -1) {
+        savedRecord = {
+          ...this.attendanceRecords[idx],
+          ...rec,
+          employeeName: empName,
+          employeeCode: empCode,
+          hourlyRate,
+          shiftCategory: shiftCat,
+          breakMinutes: breakMin,
+          totalHours,
+          overtimeHours,
+          calculatedPay,
+          status
+        };
+        this.attendanceRecords[idx] = savedRecord;
+      } else {
+        savedRecord = {
+          ...(rec as AttendanceRecord),
+          id: rec.id,
+          employeeName: empName,
+          employeeCode: empCode,
+          hourlyRate,
+          shiftCategory: shiftCat,
+          breakMinutes: breakMin,
+          totalHours,
+          overtimeHours,
+          calculatedPay,
+          status,
+          date: rec.date || new Date().toISOString().slice(0, 10),
+          checkInTime: rec.checkInTime || '08:00',
+          branch: rec.branch || 'Main Branch - Mabellah Sanaya',
+          isApproved: rec.isApproved || false
+        };
+        this.attendanceRecords.unshift(savedRecord);
+      }
+    } else {
+      const nextId = this.attendanceRecords.length ? Math.max(...this.attendanceRecords.map(r => r.id)) + 1 : 1;
+      savedRecord = {
+        id: nextId,
+        employeeId: rec.employeeId,
+        employeeCode: empCode,
+        employeeName: empName,
+        branch: rec.branch || emp?.branch || 'Main Branch - Mabellah Sanaya',
+        date: rec.date || new Date().toISOString().slice(0, 10),
+        checkInTime: rec.checkInTime || '08:00',
+        checkOutTime: rec.checkOutTime,
+        breakMinutes: breakMin,
+        totalHours,
+        overtimeHours,
+        shiftCategory: shiftCat,
+        status,
+        hourlyRate,
+        calculatedPay,
+        isApproved: rec.isApproved || false,
+        notes: rec.notes
+      };
+      this.attendanceRecords.unshift(savedRecord);
+    }
+
+    this.logAudit(`Attendance timestamp saved for ${savedRecord.employeeName}`, 'attendance', savedRecord.id);
+    this.persist();
+    return savedRecord;
+  }
+
+  // Delete Attendance Record
+  public deleteAttendanceRecord(id: number) {
+    this.attendanceRecords = this.attendanceRecords.filter(r => r.id !== id);
+    this.logAudit(`Deleted attendance record #${id}`, 'attendance', id);
+    this.persist();
+  }
+
+  // Approve Attendance for Payroll
+  public approveAttendanceRecord(id: number, approverName = 'System Administrator') {
+    const rec = this.attendanceRecords.find(r => r.id === id);
+    if (rec) {
+      rec.isApproved = true;
+      rec.approvedBy = approverName;
+      this.logAudit(`Approved attendance payroll for #${id} (${rec.employeeName})`, 'payroll', id, approverName);
+      this.persist();
+    }
+  }
+
+  // Employee CRUD
+  public saveEmployee(emp: Partial<Employee> & { name: string; code: string }): Employee {
+    if (emp.id) {
+      const idx = this.employees.findIndex(e => e.id === emp.id);
+      if (idx !== -1) {
+        this.employees[idx] = { ...this.employees[idx], ...emp } as Employee;
+        this.logAudit(`Updated employee: ${emp.name}`, 'employee', emp.id);
+        this.persist();
+        return this.employees[idx];
+      }
+    }
+    const nextId = this.employees.length ? Math.max(...this.employees.map(e => e.id)) + 1 : 1;
+    const newEmp: Employee = {
+      id: nextId,
+      code: emp.code,
+      name: emp.name,
+      designation: emp.designation || 'Specialist',
+      department: emp.department || 'Operations',
+      shiftCategory: emp.shiftCategory || 'Morning Shift',
+      hourlyRate: emp.hourlyRate || 3.000,
+      phone: emp.phone || '+968 ',
+      email: emp.email || '',
+      branch: emp.branch || 'Main Branch - Mabellah Sanaya',
+      status: emp.status || 'Active'
+    };
+    this.employees.push(newEmp);
+    this.logAudit(`Added new employee: ${newEmp.name}`, 'employee', newEmp.id);
+    this.persist();
+    return newEmp;
+  }
+
+  public deleteEmployee(id: number) {
+    this.employees = this.employees.filter(e => e.id !== id);
+    this.logAudit(`Deleted employee #${id}`, 'employee', id);
+    this.persist();
+  }
+
+  // Shift Categories CRUD
+  public saveShiftCategory(shift: Partial<AttendanceShiftCategory> & { name: string }): AttendanceShiftCategory {
+    if (shift.id) {
+      const idx = this.shifts.findIndex(s => s.id === shift.id);
+      if (idx !== -1) {
+        this.shifts[idx] = { ...this.shifts[idx], ...shift } as AttendanceShiftCategory;
+        this.logAudit(`Updated shift: ${shift.name}`, 'shift', shift.id);
+        this.persist();
+        return this.shifts[idx];
+      }
+    }
+    const nextId = this.shifts.length ? Math.max(...this.shifts.map(s => s.id)) + 1 : 1;
+    const newShift: AttendanceShiftCategory = {
+      id: nextId,
+      name: shift.name,
+      startTime: shift.startTime || '08:00',
+      endTime: shift.endTime || '16:30',
+      standardHours: shift.standardHours || 8,
+      defaultBreakMinutes: shift.defaultBreakMinutes || 60,
+      overtimeThresholdHours: shift.overtimeThresholdHours || 8.5,
+      overtimeRateMultiplier: shift.overtimeRateMultiplier || 1.5,
+      color: shift.color || '#10b981'
+    };
+    this.shifts.push(newShift);
+    this.logAudit(`Created shift category: ${newShift.name}`, 'shift', newShift.id);
+    this.persist();
+    return newShift;
+  }
+
+  public deleteShiftCategory(id: number) {
+    this.shifts = this.shifts.filter(s => s.id !== id);
+    this.logAudit(`Deleted shift category #${id}`, 'shift', id);
+    this.persist();
+  }
+
+  // Attendance Settings & Permissions
+  public updateAttendanceSettings(settings: Partial<AttendanceSettings>) {
+    this.attendanceSettings = {
+      ...this.attendanceSettings,
+      ...settings,
+      visibleColumns: {
+        ...this.attendanceSettings.visibleColumns,
+        ...(settings.visibleColumns || {})
+      }
+    };
+    this.persist();
+  }
+
+  public savePermissionRule(rule: AttendancePermissionRule) {
+    const idx = this.attendancePermissions.findIndex(r => r.id === rule.id || r.role === rule.role);
+    if (idx !== -1) {
+      this.attendancePermissions[idx] = { ...rule };
+    } else {
+      const nextId = this.attendancePermissions.length ? Math.max(...this.attendancePermissions.map(r => r.id)) + 1 : 1;
+      this.attendancePermissions.push({ ...rule, id: nextId });
+    }
+    this.logAudit(`Updated attendance permission rule for ${rule.role}`, 'permissions', rule.role);
+    this.persist();
+  }
+
+  public saveConfig(newConfig: BusinessConfig) {
+    this.config = { ...newConfig };
+    this.persist();
+  }
+
+  // User Accounts & Permissions CRUD
+  public createUser(userData: Partial<User>): User {
+    const nextId = this.users.length ? Math.max(...this.users.map(u => u.id)) + 1 : 1;
+    const branchObj = this.branches.find(b => b.id === userData.branch) || this.branches[0];
+    const newUser: User = {
+      id: nextId,
+      username: userData.username?.trim().toLowerCase() || `user_${nextId}`,
+      password: userData.password || 'user123',
+      fullname: userData.fullname || 'New Staff Member',
+      role: userData.role || 'staff',
+      branch: userData.branch || (branchObj ? branchObj.id : 1),
+      branchName: branchObj ? branchObj.name : 'Main Branch',
+      phone: userData.phone || '',
+      email: userData.email || '',
+      active: userData.active !== false,
+      permissions: userData.permissions || {
+        canEditPrice: false,
+        canViewProfit: false,
+        canTriggerEmergency: true,
+        canStopEmergency: false,
+        canRunSql: false,
+        canManageUsers: false,
+        canApprovePayroll: false,
+        canDeleteInventory: false,
+        canAccessSettings: false
+      },
+      hiddenPages: userData.hiddenPages || ['adminCenter', 'sql', 'accounts'],
+      hiddenOptions: userData.hiddenOptions || {
+        hideCostPrice: true,
+        hideProfitMargin: true,
+        hideSupplierBalances: true,
+        hideFinancialSummary: true,
+        hideDamagesCost: true
+      },
+      createdAt: new Date().toISOString().slice(0, 10)
+    };
+    this.users.push(newUser);
+    this.logAudit(`Created user account: ${newUser.username} (${newUser.role})`, 'users', newUser.id);
+    this.persist();
+    return newUser;
+  }
+
+  public updateUser(id: number, updates: Partial<User>): User | null {
+    const idx = this.users.findIndex(u => u.id === id);
+    if (idx === -1) return null;
+    if (updates.branch) {
+      const branchObj = this.branches.find(b => b.id === updates.branch);
+      if (branchObj) updates.branchName = branchObj.name;
+    }
+    this.users[idx] = { ...this.users[idx], ...updates };
+    this.logAudit(`Updated user account: ${this.users[idx].username}`, 'users', id);
+    this.persist();
+    return this.users[idx];
+  }
+
+  public deleteUser(id: number): boolean {
+    if (id === 1) return false; // Prevent deleting master admin
+    const prevLen = this.users.length;
+    this.users = this.users.filter(u => u.id !== id);
+    if (this.users.length !== prevLen) {
+      this.logAudit(`Deleted user account #${id}`, 'users', id);
+      this.persist();
+      return true;
+    }
+    return false;
+  }
+
+  public authenticate(username: string, password?: string): User | null {
+    const u = this.users.find(user => 
+      user.username.toLowerCase() === username.trim().toLowerCase() &&
+      (!password || user.password === password) &&
+      user.active !== false
+    );
+    return u || null;
+  }
+
+  public updateThemeAndEasySettings(updates: Partial<BusinessConfig>): BusinessConfig {
+    this.config = {
+      ...this.config,
+      ...updates,
+      soundAlerts: {
+        ...(this.config.soundAlerts || {}),
+        ...(updates.soundAlerts || {})
+      }
+    };
+    this.logAudit('Updated theme & easy admin preferences', 'settings', 'theme');
+    this.persist();
+    return this.config;
+  }
+
+  public generateSqlDump(): string {
+    let sql = `-- =========================================================\n`;
+    sql += `-- RST ELECTRONICS ENTERPRISE ERP - FULL DATABASE EXPORT\n`;
+    sql += `-- CR: ${this.config.cr_no} (Sultanate of Oman)\n`;
+    sql += `-- Generated: ${new Date().toISOString()}\n`;
+    sql += `-- =========================================================\n\n`;
+
+    sql += `CREATE DATABASE IF NOT EXISTS rst_electronics CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;\nUSE rst_electronics;\n\n`;
+
+    sql += `DROP TABLE IF EXISTS users;\n`;
+    sql += `CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(60) UNIQUE, fullname VARCHAR(150), role VARCHAR(30), branch INT, phone VARCHAR(50), email VARCHAR(100), active INT);\n\n`;
+    this.users.forEach(u => {
+      sql += `INSERT INTO users (id, username, fullname, role, branch, phone, email, active) VALUES (${u.id}, '${u.username}', '${u.fullname.replace(/'/g, "''")}', '${u.role}', ${u.branch}, '${u.phone || ''}', '${u.email || ''}', ${u.active ? 1 : 0});\n`;
+    });
+
+    sql += `\nDROP TABLE IF EXISTS components;\n`;
+    sql += `CREATE TABLE components (id INT PRIMARY KEY AUTO_INCREMENT, sku VARCHAR(64) UNIQUE, name VARCHAR(255), category VARCHAR(100), package_type VARCHAR(80), voltage VARCHAR(50), cost DECIMAL(12,3), price DECIMAL(12,3), stock INT, barcode VARCHAR(64));\n\n`;
+
+    this.components.forEach(c => {
+      sql += `INSERT INTO components (id, sku, name, category, package_type, voltage, cost, price, stock, barcode) VALUES (${c.id}, '${c.sku}', '${c.name.replace(/'/g, "''")}', '${c.category}', '${c.packageType}', '${c.voltage}', ${c.cost.toFixed(3)}, ${c.price.toFixed(3)}, ${c.stock}, '${c.barcode}');\n`;
+    });
+
+    sql += `\nDROP TABLE IF EXISTS invoices;\n`;
+    sql += `CREATE TABLE invoices (id INT PRIMARY KEY AUTO_INCREMENT, invoice_no VARCHAR(64) UNIQUE, date VARCHAR(64), customer VARCHAR(150), subtotal DECIMAL(12,3), vat DECIMAL(12,3), grand_total DECIMAL(12,3), payment VARCHAR(50), profit DECIMAL(12,3));\n\n`;
+
+    this.invoices.forEach(inv => {
+      sql += `INSERT INTO invoices (id, invoice_no, date, customer, subtotal, vat, grand_total, payment, profit) VALUES (${inv.id}, '${inv.invoice_no}', '${inv.date}', '${inv.customer.replace(/'/g, "''")}', ${inv.subtotal.toFixed(3)}, ${inv.vat.toFixed(3)}, ${inv.grand_total.toFixed(3)}, '${inv.payment}', ${inv.profit.toFixed(3)});\n`;
+    });
+
+    sql += `\nDROP TABLE IF EXISTS employees;\n`;
+    sql += `CREATE TABLE employees (id INT PRIMARY KEY AUTO_INCREMENT, code VARCHAR(30) UNIQUE, name VARCHAR(150), designation VARCHAR(100), department VARCHAR(100), shift VARCHAR(100), hourly_rate DECIMAL(10,3), phone VARCHAR(50), branch VARCHAR(100), status VARCHAR(30));\n\n`;
+    this.employees.forEach(e => {
+      sql += `INSERT INTO employees (id, code, name, designation, department, shift, hourly_rate, phone, branch, status) VALUES (${e.id}, '${e.code}', '${e.name.replace(/'/g, "''")}', '${e.designation}', '${e.department}', '${e.shiftCategory}', ${e.hourlyRate.toFixed(3)}, '${e.phone}', '${e.branch}', '${e.status}');\n`;
+    });
+
+    sql += `\nDROP TABLE IF EXISTS attendance;\n`;
+    sql += `CREATE TABLE attendance (id INT PRIMARY KEY AUTO_INCREMENT, employee_id INT, employee_code VARCHAR(30), employee_name VARCHAR(150), branch VARCHAR(100), date VARCHAR(20), check_in VARCHAR(20), check_out VARCHAR(20), break_min INT, total_hours DECIMAL(6,2), overtime_hours DECIMAL(6,2), shift VARCHAR(100), status VARCHAR(30), hourly_rate DECIMAL(10,3), calculated_pay DECIMAL(12,3), is_approved INT);\n\n`;
+    this.attendanceRecords.forEach(a => {
+      sql += `INSERT INTO attendance (id, employee_id, employee_code, employee_name, branch, date, check_in, check_out, break_min, total_hours, overtime_hours, shift, status, hourly_rate, calculated_pay, is_approved) VALUES (${a.id}, ${a.employeeId}, '${a.employeeCode}', '${a.employeeName.replace(/'/g, "''")}', '${a.branch}', '${a.date}', '${a.checkInTime}', '${a.checkOutTime || ''}', ${a.breakMinutes}, ${a.totalHours.toFixed(2)}, ${a.overtimeHours.toFixed(2)}, '${a.shiftCategory}', '${a.status}', ${a.hourlyRate.toFixed(3)}, ${a.calculatedPay.toFixed(3)}, ${a.isApproved ? 1 : 0});\n`;
+    });
+
+    sql += `\nDROP TABLE IF EXISTS quotations;\n`;
+    sql += `CREATE TABLE quotations (id INT PRIMARY KEY AUTO_INCREMENT, quote_no VARCHAR(64) UNIQUE, customer VARCHAR(150), grand_total DECIMAL(12,3), status VARCHAR(50));\n\n`;
+    this.quotations.forEach(q => {
+      sql += `INSERT INTO quotations (id, quote_no, customer, grand_total, status) VALUES (${q.id}, '${q.quote_no}', '${q.customer_name.replace(/'/g, "''")}', ${q.grand_total.toFixed(3)}, '${q.status}');\n`;
+    });
+
+    return sql;
+  }
+
+  // --- Quotations Management ---
+  public createQuotation(data: Partial<Quotation>): Quotation {
+    const nextId = this.quotations.length ? Math.max(...this.quotations.map(q => q.id)) + 1 : 1;
+    const quoteNo = data.quote_no || `QT-${new Date().getFullYear()}-${String(nextId).padStart(4, '0')}`;
+    const items = data.items || [];
+    const subtotal = items.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    const discount = data.discount || 0;
+    const taxable = Math.max(0, subtotal - discount);
+    const vat = this.config.vatEnabled ? taxable * this.config.vatRate : 0;
+    const grandTotal = taxable + vat;
+
+    const newQuotation: Quotation = {
+      id: nextId,
+      quote_no: quoteNo,
+      customer_id: data.customer_id,
+      customer_name: data.customer_name || 'Walk-in Customer',
+      customer_phone: data.customer_phone || '+968',
+      customer_email: data.customer_email || '',
+      date: data.date || new Date().toISOString().slice(0, 10),
+      valid_until: data.valid_until || new Date(Date.now() + 15 * 86400000).toISOString().slice(0, 10),
+      items,
+      subtotal,
+      discount,
+      vat,
+      grand_total: grandTotal,
+      status: data.status || 'Draft',
+      notes: data.notes || '',
+      terms: data.terms || 'Prices valid for 15 days from issuance. Subject to stock availability in Sultanate of Oman.'
+    };
+
+    this.quotations.unshift(newQuotation);
+    this.logAudit(`Created Quotation ${newQuotation.quote_no} for ${newQuotation.customer_name}`, 'quotation', newQuotation.id);
+    this.persist();
+    return newQuotation;
+  }
+
+  public updateQuotation(id: number, updates: Partial<Quotation>): Quotation | null {
+    const idx = this.quotations.findIndex(q => q.id === id);
+    if (idx === -1) return null;
+    this.quotations[idx] = { ...this.quotations[idx], ...updates };
+    this.persist();
+    return this.quotations[idx];
+  }
+
+  public deleteQuotation(id: number): boolean {
+    const idx = this.quotations.findIndex(q => q.id === id);
+    if (idx === -1) return false;
+    const [deleted] = this.quotations.splice(idx, 1);
+    this.logAudit(`Deleted quotation: ${deleted.quote_no}`, 'quotation', id);
+    this.persist();
+    return true;
+  }
+
+  public convertQuotationToInvoice(quoteId: number): Invoice | null {
+    const quote = this.quotations.find(q => q.id === quoteId);
+    if (!quote) return null;
+
+    const nextId = this.invoices.length ? Math.max(...this.invoices.map(i => i.id)) + 1 : 1;
+    const invoiceNo = `RST-${String(nextId).padStart(5, '0')}`;
+    
+    // Estimate profit
+    const costTotal = quote.items.reduce((sum, it) => sum + ((it.cost || it.price * 0.8) * it.qty), 0);
+    const profit = Math.max(0, quote.subtotal - quote.discount - costTotal);
+
+    const invoice: Invoice = {
+      id: nextId,
+      invoice_no: invoiceNo,
+      date: new Date().toISOString(),
+      customer: quote.customer_name,
+      customer_id: quote.customer_id,
+      items: quote.items.map(it => ({
+        id: it.id,
+        name: it.name,
+        price: it.price,
+        cost: it.cost || (it.price * 0.8),
+        qty: it.qty,
+        isComponent: it.isComponent,
+        barcode: it.sku || generateEAN13(),
+        imei: it.name.toLowerCase().includes('phone') || it.name.toLowerCase().includes('ultra') ? generateIMEI() : undefined
+      })),
+      subtotal: quote.subtotal,
+      discount: quote.discount,
+      vat: quote.vat,
+      grand_total: quote.grand_total,
+      payment: 'Cash',
+      profit,
+      branch: 'Main Branch - Mabellah Sanaya',
+      operator: 'admin',
+      status: 'Paid'
+    };
+
+    this.invoices.unshift(invoice);
+    quote.status = 'Converted';
+    this.logAudit(`Converted Quotation ${quote.quote_no} to Tax Invoice ${invoice.invoice_no}`, 'invoice', invoice.id);
+    this.persist();
+    return invoice;
+  }
+
+  // --- Custom Phone Devices CRUD for Admin ---
+  public addCustomPhoneDevice(device: Partial<PhoneDevice>): PhoneDevice {
+    const nextId = this.phoneDevices.length ? Math.max(...this.phoneDevices.map(d => d.id)) + 1 : 100000;
+    const brandName = device.brand_name || 'Custom Brand';
+    let brandObj = this.phoneBrands.find(b => b.name.toLowerCase() === brandName.toLowerCase());
+    if (!brandObj) {
+      const nextBrandId = this.phoneBrands.length ? Math.max(...this.phoneBrands.map(b => b.id)) + 1 : 1;
+      brandObj = { id: nextBrandId, name: brandName, device_count: 1, num_devices: 1 };
+      this.phoneBrands.push(brandObj);
+    } else {
+      brandObj.device_count = (brandObj.device_count || 0) + 1;
+      brandObj.num_devices = (brandObj.num_devices || 0) + 1;
+    }
+
+    const deviceName = device.device_name || device.name || 'New Smartphone Model';
+    const newDevice: PhoneDevice = {
+      id: nextId,
+      brand_id: brandObj.id,
+      brand_name: brandObj.name,
+      name: deviceName,
+      device_name: deviceName,
+      picture: device.device_image || device.picture || 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80',
+      device_image: device.device_image || device.picture || 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80',
+      device_type: device.device_type || 'Smartphone',
+      released_at: device.release_date || device.released_at || new Date().toISOString().slice(0, 10),
+      release_date: device.release_date || device.released_at || new Date().toISOString().slice(0, 10),
+      os: device.os || 'Android 14 / Custom OS',
+      storage: device.storage || '256GB',
+      ram: device.ram || '8GB RAM',
+      display: device.display || device.display_size || '6.7 inches',
+      display_size: device.display_size || device.display || '6.7 inches',
+      display_resolution: device.display_resolution || '1080 x 2400 pixels',
+      camera_spec: device.camera_spec || '50 MP + 12 MP',
+      battery: device.battery || '5000 mAh Li-Po',
+      chipset: device.chipset || 'Octa-Core High Performance Processor'
+    };
+
+    this.phoneDevices.unshift(newDevice);
+    this.logAudit(`Admin added custom phone device: ${newDevice.brand_name} ${newDevice.device_name}`, 'phone_device', newDevice.id);
+    this.syncAlaSqlTables();
+    return newDevice;
+  }
+
+  public updatePhoneDevice(id: number, updates: Partial<PhoneDevice>): PhoneDevice | null {
+    const idx = this.phoneDevices.findIndex(d => d.id === id);
+    if (idx === -1) return null;
+    this.phoneDevices[idx] = { ...this.phoneDevices[idx], ...updates };
+    this.syncAlaSqlTables();
+    return this.phoneDevices[idx];
+  }
+
+  public deletePhoneDevice(id: number): boolean {
+    const idx = this.phoneDevices.findIndex(d => d.id === id);
+    if (idx === -1) return false;
+    const [deleted] = this.phoneDevices.splice(idx, 1);
+    this.logAudit(`Deleted phone device: ${deleted.brand_name} ${deleted.device_name}`, 'phone_device', id);
+    this.syncAlaSqlTables();
+    return true;
+  }
+
+  // --- Landing Page & Blog Management ---
+  public updateLandingPageConfig(updates: Partial<LandingPageConfig>): LandingPageConfig {
+    if (!this.config.landingPage) {
+      this.config.landingPage = { ...DEFAULT_LANDING_PAGE };
+    }
+    this.config.landingPage = { ...this.config.landingPage, ...updates };
+    this.persist();
+    return this.config.landingPage;
+  }
+
+  public addBlogPost(post: Partial<BlogPost>): BlogPost {
+    if (!this.config.landingPage) this.config.landingPage = { ...DEFAULT_LANDING_PAGE };
+    const posts = this.config.landingPage.blogPosts || [];
+    const nextId = posts.length ? Math.max(...posts.map(p => p.id)) + 1 : 1;
+    const newPost: BlogPost = {
+      id: nextId,
+      title: post.title || 'New Telecom & Mobile Tech Article',
+      slug: (post.title || 'new-article').toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+      summary: post.summary || 'Summary of the new technology update.',
+      content: post.content || 'Content goes here.',
+      author: post.author || 'Top Telecom Editorial Team',
+      date: new Date().toISOString().slice(0, 10),
+      category: post.category || 'Technology',
+      image: post.image || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
+      tags: post.tags || ['Top Telecom', 'Oman'],
+      readTime: post.readTime || '3 min read',
+      published: post.published !== false
+    };
+
+    posts.unshift(newPost);
+    this.config.landingPage.blogPosts = posts;
+    this.persist();
+    return newPost;
+  }
+
+  public updateBlogPost(id: number, updates: Partial<BlogPost>): BlogPost | null {
+    if (!this.config.landingPage?.blogPosts) return null;
+    const idx = this.config.landingPage.blogPosts.findIndex(p => p.id === id);
+    if (idx === -1) return null;
+    this.config.landingPage.blogPosts[idx] = { ...this.config.landingPage.blogPosts[idx], ...updates };
+    this.persist();
+    return this.config.landingPage.blogPosts[idx];
+  }
+
+  public deleteBlogPost(id: number): boolean {
+    if (!this.config.landingPage?.blogPosts) return false;
+    const idx = this.config.landingPage.blogPosts.findIndex(p => p.id === id);
+    if (idx === -1) return false;
+    this.config.landingPage.blogPosts.splice(idx, 1);
+    this.persist();
+    return true;
+  }
+
+  // --- Cloud Systems Backup & Export (GitHub, Google Drive, Gmail) ---
+  public exportGoogleDriveBackupJson(): string {
+    const backupObj = {
+      version: '2.5.0',
+      application: 'Top Telecom Oman & RST Electronics ERP',
+      exportedAt: new Date().toISOString(),
+      company: this.config,
+      users: this.users,
+      quotations: this.quotations,
+      invoices: this.invoices,
+      components: this.components,
+      products: this.products,
+      customers: this.customers,
+      telecomOperators: this.telecomOperators,
+      telecomTx: this.telecomTx,
+      loyaltyCards: this.loyaltyCards,
+      damages: this.damages,
+      employees: this.employees,
+      attendanceRecords: this.attendanceRecords,
+      shifts: this.shifts
+    };
+    return JSON.stringify(backupObj, null, 2);
+  }
+
+  public exportGitHubGistFormat(): string {
+    return JSON.stringify({
+      description: `RST Enterprise Database Backup - ${this.config.business_name} - ${new Date().toISOString()}`,
+      public: false,
+      files: {
+        'database_backup.json': {
+          content: this.exportGoogleDriveBackupJson()
+        },
+        'schema_dump.sql': {
+          content: this.generateSqlDump()
+        }
+      }
+    }, null, 2);
+  }
+
+  public generateGmailInvoiceHtml(invoice: Invoice): string {
+    const lines = invoice.items.map(it => 
+      `<tr>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd;">${it.name}${it.imei ? ` <br><small style="color: #666;">IMEI: ${it.imei}</small>` : ''}</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: center;">${it.qty}</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: right;">${it.price.toFixed(3)} ${this.config.currency}</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: right;">${(it.price * it.qty).toFixed(3)} ${this.config.currency}</td>
+      </tr>`
+    ).join('');
+
+    return `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="font-family: Arial, sans-serif; max-width: 650px; margin: 0 auto; color: #1e293b; background-color: #f8fafc; padding: 20px;">
+  <div style="background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 24px;">
+    <div style="border-bottom: 2px solid #059669; padding-bottom: 16px; margin-bottom: 20px;">
+      <h2 style="margin: 0; color: #059669; font-size: 20px;">${this.config.business_name}</h2>
+      <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">CR: ${this.config.cr_no} | ${this.config.address} | Tel: ${this.config.phone}</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+      <div>
+        <p style="margin: 0; font-size: 13px; color: #64748b;">INVOICE TO:</p>
+        <p style="margin: 4px 0 0 0; font-weight: bold; font-size: 15px;">${invoice.customer}</p>
+        <p style="margin: 2px 0 0 0; font-size: 12px; color: #64748b;">Payment Method: <strong>${invoice.payment}</strong></p>
+      </div>
+      <div style="text-align: right;">
+        <p style="margin: 0; font-size: 13px; color: #64748b;">INVOICE NUMBER:</p>
+        <p style="margin: 4px 0 0 0; font-weight: bold; font-size: 16px; color: #0f172a;">${invoice.invoice_no}</p>
+        <p style="margin: 2px 0 0 0; font-size: 12px; color: #64748b;">Date: ${new Date(invoice.date).toLocaleDateString()}</p>
+      </div>
+    </div>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 20px;">
+      <thead>
+        <tr style="background-color: #f1f5f9; text-align: left;">
+          <th style="padding: 8px;">Description</th>
+          <th style="padding: 8px; text-align: center;">Qty</th>
+          <th style="padding: 8px; text-align: right;">Rate</th>
+          <th style="padding: 8px; text-align: right;">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${lines}
+      </tbody>
+    </table>
+
+    <div style="text-align: right; font-size: 13px; margin-bottom: 20px;">
+      <p style="margin: 4px 0;">Subtotal: <strong>${invoice.subtotal.toFixed(3)} ${this.config.currency}</strong></p>
+      ${invoice.discount > 0 ? `<p style="margin: 4px 0; color: #dc2626;">Discount: -${invoice.discount.toFixed(3)} ${this.config.currency}</p>` : ''}
+      <p style="margin: 4px 0;">Oman VAT (5%): <strong>${invoice.vat.toFixed(3)} ${this.config.currency}</strong></p>
+      <h3 style="margin: 8px 0 0 0; color: #059669; font-size: 18px;">Grand Total: ${invoice.grand_total.toFixed(3)} ${this.config.currency}</h3>
+    </div>
+
+    <div style="border-top: 1px solid #e2e8f0; padding-top: 16px; font-size: 11px; color: #94a3b8; text-align: center;">
+      Thank you for doing business with ${this.config.business_name}. Computer generated invoice under Sultanate of Oman Tax Authority regulations.
+    </div>
+  </div>
+</body>
+</html>
+    `.trim();
+  }
+}
+
+export const db = new DatabaseManager();
+
+
+
+n: {
+    appName: 'RST ELECTRONICS',
+    legalSub: 'AL WAHA AL KHDRA AL MUTAKAMILAH TRADING',
+    crInfo: 'CR: 1374092 | Mabellah Sanaya, Oman | Tel: +968 9430 1393',
+    dashboard: 'Dashboard',
+    componentsCatalog: 'Component Catalog',
+    pos: 'POS & Invoicing',
+    sqlStudio: 'SQL Database Studio',
+    inventory: 'Inventory & Products',
+    barcodeStudio: 'Barcode & IMEI Studio',
+    telecomUtility: 'Telecom & Utilities',
+    accounts: 'Profit & Cashbook',
+    customers: 'Customers',
+    warranties: 'Warranties & Installments',
+    settings: 'Settings',
+    logout: 'Logout',
+    
+    // Catalog
+    searchComponents: 'Search ICs, Microcontrollers, Sensors, Displays, Values...',
+    allCategories: 'All Categories',
+    packageType: 'Package',
+    voltage: 'Voltage',
+    inStockOnly: 'In Stock Only',
+    addToCart: 'Add to Cart',
+    addedToCart: 'Added to Cart',
+    datasheet: 'Datasheet',
+    specs: 'Specifications',
+    pinout: 'Pinout & Pins',
+    bomQuotation: 'BOM / Cart',
+    stockLevel: 'Stock',
+
+    // POS
+    posTitle: 'Point of Sale & Invoicing',
+    scanOrType: 'Scan barcode, IMEI, or search item...',
+    customer: 'Customer',
+    walkIn: 'Walk-in Customer',
+    paymentMethod: 'Payment Method',
+    cash: 'Cash',
+    card: 'Credit/Debit Card',
+    bank: 'Bank Transfer',
+    due: 'Credit / Due',
+    subtotal: 'Subtotal',
+    vat: 'VAT (5%)',
+    discount: 'Discount',
+    grandTotal: 'Grand Total',
+    checkoutPrint: 'Checkout & Print Invoice',
+    cartEmpty: 'Cart is empty',
+    itemsInCart: 'Items in Cart',
+
+    // SQL Studio
+    sqlTitle: 'Relational SQL Database Engine',
+    sqlSubtitle: 'Direct SQL query execution, relational schema viewer, table browser, and export',
+    runQuery: 'Execute SQL',
+    queryPresets: 'Query Presets',
+    schemaViewer: 'Schema & Tables',
+    tableBrowser: 'Browse Table',
+    sqlExport: 'Download SQL Dump',
+    sqlScript: 'SQL Script Runner',
+    querySuccess: 'Query executed successfully',
+    affectedRows: 'rows returned',
+
+    // Common
+    save: 'Save',
+    cancel: 'Cancel',
+    edit: 'Edit',
+    delete: 'Delete',
+    print: 'Print',
+    currency: 'OMR',
+    todaySales: "Today's Sales",
+    netProfit: 'Net Profit',
+    vatCollected: 'VAT Collected',
+    stockValue: 'Stock Valuation',
+    telecomWallet: 'Telecom Wallet',
+    lowStockAlert: 'Low Stock Alert',
+  },
+  bn: {
+    appName: 'RST ইলেকট্রনিক্স',
+    legalSub: 'আল ওয়াহা আল খাদরা আল মুতাকামিলাহ ট্রেডিং',
+    crInfo: 'সিআর: ১৩৭৪০৯২ | মাবেল্লাহ সানায়া, ওমান | ফোন: +৯৬৮ ৯৪৩০ ১৩৯৩',
+    dashboard: 'ড্যাশবোর্ড',
+    componentsCatalog: 'কম্পোনেন্ট ক্যাটালগ',
+    pos: 'সেলস / POS',
+    sqlStudio: 'SQL ডাটাবেস স্টুডিও',
+    inventory: 'ইনভেন্টরি ও প্রোডাক্ট',
+    barcodeStudio: 'বারকোড ও IMEI স্টুডিও',
+    telecomUtility: 'টেলিকম ও ইউটিলিটি বিল',
+    accounts: 'হিসাব ও মুনাফা',
+    customers: 'কাস্টমার তালিকা',
+    warranties: 'ওয়ারেন্টি ও কিস্তি',
+    settings: 'সেটিংস',
+    logout: 'লগআউট',
+
+    // Catalog
+    searchComponents: 'আইসি, মাইক্রোকন্ট্রোলার, সেন্সর, ডিসপ্লে, মান খুঁজুন...',
+    allCategories: 'সকল ক্যাটাগরি',
+    packageType: 'প্যাকেজ',
+    voltage: 'ভোল্টেজ',
+    inStockOnly: 'শুধুমাত্র স্টকে আছে',
+    addToCart: 'কার্টে যোগ করুন',
+    addedToCart: 'কার্টে যোগ হয়েছে',
+    datasheet: 'ডাটাশিট',
+    specs: 'স্পেসিফিকেশন',
+    pinout: 'পিনআউট বিবরণ',
+    bomQuotation: 'BOM / কার্ট',
+    stockLevel: 'স্টক',
+
+    // POS
+    posTitle: 'পয়েন্ট অফ সেলস ও চালান',
+    scanOrType: 'বারকোড, IMEI স্ক্যান করুন বা লিখুন...',
+    customer: 'কাস্টমার',
+    walkIn: 'ওয়াক-ইন কাস্টমার',
+    paymentMethod: 'পেমেন্ট পদ্ধতি',
+    cash: 'নগদ',
+    card: 'কার্ড',
+    bank: 'ব্যাংক ট্রান্সফার',
+    due: 'বাকি',
+    subtotal: 'উপ-মোট',
+    vat: 'ভ্যাট (৫%)',
+    discount: 'ডিসকাউন্ট',
+    grandTotal: 'সর্বমোট',
+    checkoutPrint: 'বিক্রয় ও চালান প্রিন্ট',
+    cartEmpty: 'কার্ট খালি',
+    itemsInCart: 'কার্টের আইটেম',
+
+    // SQL Studio
+    sqlTitle: 'রিলেশনাল SQL ডাটাবেস ইঞ্জিন',
+    sqlSubtitle: 'সরাসরি SQL কুয়েরি রান, স্কিমা পর্যবেক্ষণ, টেবিল ব্রাউজার ও এসকিউএল এক্সপোর্ট',
+    runQuery: 'কুয়েরি চালান',
+    queryPresets: 'প্রস্তুতকৃত কুয়েরি',
+    schemaViewer: 'স্কিমা ও টেবিল',
+    tableBrowser: 'টেবিল ব্রাউজ',
+    sqlExport: 'SQL ডাম্প ডাউনলোড',
+    sqlScript: 'SQL স্ক্রিপ্ট রানার',
+    querySuccess: 'কুয়েরি সফলভাবে সম্পন্ন হয়েছে',
+    affectedRows: 'টি সারি পাওয়া গেছে',
+
+    // Common
+    save: 'সংরক্ষণ',
+    cancel: 'বাতিল',
+    edit: 'সম্পাদনা',
+    delete: 'মুছুন',
+    print: 'প্রিন্ট',
+    currency: 'OMR',
+    todaySales: 'আজকের বিক্রয়',
+    netProfit: 'নিট মুনাফা',
+    vatCollected: 'সংগৃহীত ভ্যাট',
+    stockValue: 'স্টক ভ্যালু',
+    telecomWallet: 'টেলিকম ব্যালেন্স',
+    lowStockAlert: 'লো স্টক অ্যালার্ট',
+  },
+  ar: {
+    appName: 'آر إس تي للإلكترونيات',
+    legalSub: 'شركة الواحة الخضراء المتكاملة للتجارة',
+    crInfo: 'س.ت: 1374092 | المعبيلة الصناعية، عُمان | هاتف: 94301393 968+',
+    dashboard: 'لوحة التحكم',
+    componentsCatalog: 'كتالوج المكونات',
+    pos: 'نقطة البيع والفواتير',
+    sqlStudio: 'استوديو قاعدة بيانات SQL',
+    inventory: 'المخزون والمنتجات',
+    barcodeStudio: 'الباركود و IMEI',
+    telecomUtility: 'الاتصالات والمرافق',
+    accounts: 'الأرباح والصندوق',
+    customers: 'العملاء',
+    warranties: 'الضمان والتقسيط',
+    settings: 'الإعدادات',
+    logout: 'تسجيل خروج',
+
+    // Catalog
+    searchComponents: 'ابحث عن الدوائر المتكاملة، الحساسات، الشاشات، المتحكمات...',
+    allCategories: 'جميع الفئات',
+    packageType: 'نوع الحزمة',
+    voltage: 'الجهد الكهربائي',
+    inStockOnly: 'المتوفر في المخزن فقط',
+    addToCart: 'إضافة إلى السلة',
+    addedToCart: 'تمت الإضافة للسلة',
+    datasheet: 'ورقة البيانات',
+    specs: 'المواصفات الفنية',
+    pinout: 'مخطط الأطراف (Pinout)',
+    bomQuotation: 'سلة المكونات (BOM)',
+    stockLevel: 'المخزون',
+
+    // POS
+    posTitle: 'نقطة البيع وإصدار الفواتير',
+    scanOrType: 'امسح الباركود أو IMEI أو ابحث...',
+    customer: 'العميل',
+    walkIn: 'عميل نقدي',
+    paymentMethod: 'طريقة الدفع',
+    cash: 'نقداً',
+    card: 'بطاقة مصرفية',
+    bank: 'تحويل بنكي',
+    due: 'آجل / ذمم',
+    subtotal: 'المجموع الفرعي',
+    vat: 'ضريبة القيمة المضافة (5%)',
+    discount: 'الخصم',
+    grandTotal: 'المبلغ الإجمالي',
+    checkoutPrint: 'إتمام البيع وطباعة الفاتورة',
+    cartEmpty: 'السلة فارغة',
+    itemsInCart: 'عناصر السلة',
+
+    // SQL Studio
+    sqlTitle: 'محرك قواعد بيانات SQL العلائقي',
+    sqlSubtitle: 'تنفيذ استعلامات SQL، استعراض الجداول، تصدير ملفات SQL وتشغيل البرامج النصية',
+    runQuery: 'تنفيذ الاستعلام',
+    queryPresets: 'استعلامات جاهزة',
+    schemaViewer: 'المخطط والجداول',
+    tableBrowser: 'تصفح الجدول',
+    sqlExport: 'تصدير ملف SQL',
+    sqlScript: 'مشغل نصوص SQL',
+    querySuccess: 'تم تنفيذ الاستعلام بنجاح',
+    affectedRows: 'سجلات مسترجعة',
+
+    // Common
+    save: 'حفظ',
+    cancel: 'إلغاء',
+    edit: 'تعديل',
+    delete: 'حذف',
+    print: 'طباعة',
+    currency: 'ر.ع.',
+    todaySales: 'مبيعات اليوم',
+    netProfit: 'صافي الربح',
+    vatCollected: 'الضريبة المحصلة',
+    stockValue: 'قيمة المخزون',
+    telecomWallet: 'رصيد الاتصالات',
+    lowStockAlert: 'تنبيه نقص المخزون',
+  }
+};
+
+ Web Audio API Sound Synthesizer for POS, Scans, and Emergency Siren Alerts
+ */
+class SoundEngineClass {
+  private ctx: AudioContext | null = null;
+  public enabled = true;
+  private sirenInterval: any = null;
+  public isSirenActive = false;
+
+  private initCtx() {
+    if (!this.ctx) {
+      const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      if (AudioCtx) {
+        this.ctx = new AudioCtx();
+      }
+    }
+    if (this.ctx && this.ctx.state === 'suspended') {
+      this.ctx.resume();
+    }
+  }
+
+  playTone(freq: number, duration: number, type: OscillatorType = 'sine', volume = 0.08) {
+    if (!this.enabled) return;
+    try {
+      this.initCtx();
+      if (!this.ctx) return;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+      gain.gain.setValueAtTime(volume, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start();
+      osc.stop(this.ctx.currentTime + duration);
+    } catch {
+      // AudioContext policy suppression fallback
+    }
+  }
+
+  click() {
+    this.playTone(600, 0.04, 'sine', 0.04);
+  }
+
+  beep() {
+    this.playTone(950, 0.08, 'sine', 0.07);
+  }
+
+  scan() {
+    this.playTone(1200, 0.06, 'triangle', 0.1);
+    setTimeout(() => this.playTone(1600, 0.08, 'triangle', 0.1), 70);
+  }
+
+  success() {
+    this.playTone(880, 0.12, 'sine', 0.09);
+    setTimeout(() => this.playTone(1320, 0.18, 'sine', 0.09), 90);
+  }
+
+  warning() {
+    this.playTone(450, 0.15, 'square', 0.08);
+  }
+
+  error() {
+    this.playTone(220, 0.25, 'sawtooth', 0.1);
+  }
+
+  notify() {
+    this.playTone(660, 0.12, 'sine', 0.08);
+    setTimeout(() => this.playTone(990, 0.16, 'sine', 0.08), 100);
+  }
+
+  // 6-Beep Emergency Siren Alert Pattern
+  playEmergencySiren(repeat = true) {
+    if (!this.enabled) return;
+    this.stopEmergencySiren();
+    this.isSirenActive = true;
+
+    const playSequence = () => {
+      const freqs = [800, 1100, 800, 1100, 800, 1200];
+      freqs.forEach((f, idx) => {
+        setTimeout(() => {
+          if (this.isSirenActive) {
+            this.playTone(f, 0.15, 'sawtooth', 0.18);
+          }
+        }, idx * 180);
+      });
+    };
+
+    playSequence();
+    if (repeat) {
+      this.sirenInterval = setInterval(() => {
+        if (this.isSirenActive) {
+          playSequence();
+        } else {
+          this.stopEmergencySiren();
+        }
+      }, 1500);
+    }
+  }
+
+  stopEmergencySiren() {
+    this.isSirenActive = false;
+    if (this.sirenInterval) {
+      clearInterval(this.sirenInterval);
+      this.sirenInterval = null;
+    }
+  }
+
+  cash() {
+    this.playTone(987.77, 0.08, 'sine', 0.12); // B5
+    setTimeout(() => this.playTone(1318.51, 0.18, 'sine', 0.14), 70); // E6
+  }
+}
+
+export const SoundEngine = new SoundEngineClass();
+/ Free Web Speech API Engine for Voice AI, Speech-to-Text & Text-to-Speech
+export interface VoiceCommandResult {
+  transcript: string;
+  isFinal: boolean;
+}
+
+export class VoiceEngine {
+  private static recognition: any = null;
+  private static isListening: boolean = false;
+  private static voices: SpeechSynthesisVoice[] = [];
+
+  public static isSpeechRecognitionSupported(): boolean {
+    return typeof window !== 'undefined' && ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window);
+  }
+
+  public static isSpeechSynthesisSupported(): boolean {
+    return typeof window !== 'undefined' && 'speechSynthesis' in window;
+  }
+
+  public static getVoices(): SpeechSynthesisVoice[] {
+    if (!this.isSpeechSynthesisSupported()) return [];
+    if (this.voices.length === 0) {
+      this.voices = window.speechSynthesis.getVoices();
+    }
+    return this.voices;
+  }
+
+  // Text-To-Speech (Speech Synthesis)
+  public static speak(text: string, lang: string = 'en-US', onEnd?: () => void) {
+    if (!this.isSpeechSynthesisSupported()) {
+      console.warn('Speech synthesis not supported on this browser.');
+      return;
+    }
+
+    try {
+      window.speechSynthesis.cancel(); // stop previous utterance
+      const cleanText = text.replace(/[*_#`]/g, ''); // strip markdown
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      
+      utterance.rate = 1.0;
+      utterance.pitch = 1.0;
+      utterance.lang = lang;
+
+      const available = this.getVoices();
+      const preferred = available.find(v => v.lang.startsWith(lang.slice(0, 2)));
+      if (preferred) {
+        utterance.voice = preferred;
+      }
+
+      if (onEnd) {
+        utterance.onend = onEnd;
+      }
+
+      window.speechSynthesis.speak(utterance);
+    } catch (e) {
+      console.error('Voice synthesis error:', e);
+    }
+  }
+
+  public static stopSpeaking() {
+    if (this.isSpeechSynthesisSupported()) {
+      window.speechSynthesis.cancel();
+    }
+  }
+
+  // Speech-To-Text (Speech Recognition)
+  public static startListening(
+    onResult: (result: VoiceCommandResult) => void,
+    onError: (err: string) => void,
+    onStop: () => void,
+    lang: string = 'en-US'
+  ): boolean {
+    if (!this.isSpeechRecognitionSupported()) {
+      onError('Speech recognition is not supported in this browser. Please use Chrome/Edge or modern browser.');
+      return false;
+    }
+
+    if (this.isListening) {
+      this.stopListening();
+    }
+
+    try {
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      this.recognition = new SpeechRecognition();
+      this.recognition.continuous = false;
+      this.recognition.interimResults = true;
+      this.recognition.lang = lang;
+
+      this.recognition.onstart = () => {
+        this.isListening = true;
+      };
+
+      this.recognition.onresult = (event: any) => {
+        let transcript = '';
+        let isFinal = false;
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          transcript += event.results[i][0].transcript;
+          if (event.results[i].isFinal) {
+            isFinal = true;
+          }
+        }
+        onResult({ transcript, isFinal });
+      };
+
+      this.recognition.onerror = (event: any) => {
+        this.isListening = false;
+        onError(event.error || 'Speech recognition error');
+      };
+
+      this.recognition.onend = () => {
+        this.isListening = false;
+        onStop();
+      };
+
+      this.recognition.start();
+      return true;
+    } catch (e: any) {
+      this.isListening = false;
+      onError(e.message || 'Could not start microphone');
+      return false;
+    }
+  }
+
+  public static stopListening() {
+    if (this.recognition && this.isListening) {
+      try {
+        this.recognition.stop();
+      } catch (e) {
+        // ignore
+      }
+      this.isListening = false;
+    }
+  }
+
+  public static get listening(): boolean {
+    return this.isListening;
+  }
+}
+ * RST Electronics Barcode & Hardware Identifier Utilities
+ */
+
+// Generate valid EAN-13 barcode with mod 10 checksum
+export function generateEAN13(prefix = '890'): string {
+  const timestampPart = String(Date.now()).slice(-8);
+  const randomDigit = Math.floor(Math.random() * 9);
+  const base12 = `${prefix}${timestampPart}${randomDigit}`.slice(0, 12);
+  
+  let sum = 0;
+  for (let i = 0; i < 12; i++) {
+    const digit = parseInt(base12[i], 10);
+    sum += i % 2 === 0 ? digit * 1 : digit * 3;
+  }
+  const checkDigit = (10 - (sum % 10)) % 10;
+  return `${base12}${checkDigit}`;
+}
+
+// Generate valid 15-digit IMEI with Luhn checksum (Standard TAC 35 or 86)
+export function generateIMEI(tacPrefix = '35'): string {
+  const remainingTacDigits = Math.max(0, 8 - tacPrefix.length);
+  const randomTac = String(Math.floor(100000 + Math.random() * 900000)).slice(0, remainingTacDigits);
+  const tac = (tacPrefix + randomTac).slice(0, 8);
+  const snr = String(Math.floor(100000 + Math.random() * 900000)); // 6 digits serial
+  const imei14 = (tac + snr).slice(0, 14);
+
+  let sum = 0;
+  for (let i = 0; i < 14; i++) {
+    let d = parseInt(imei14[i], 10);
+    if (i % 2 === 1) {
+      d *= 2;
+      if (d > 9) d -= 9;
+    }
+    sum += d;
+  }
+  const check = (10 - (sum % 10)) % 10;
+  return `${imei14}${check}`;
+}
+
+export function validateIMEI(imei: string): boolean {
+  const clean = imei.replace(/\D/g, '');
+  if (clean.length !== 15) return false;
+  
+  let sum = 0;
+  for (let i = 0; i < 15; i++) {
+    let d = parseInt(clean[i], 10);
+    if (i % 2 === 1) {
+      d *= 2;
+      if (d > 9) d -= 9;
+    }
+    sum += d;
+  }
+  return sum % 10 === 0;
+}
+
+export function generateSerial(prefix = 'RST'): string {
+  const now = Date.now().toString(36).toUpperCase();
+  const rand = Math.random().toString(36).substring(2, 6).toUpperCase();
+  return `${prefix}-${now}-${rand}`;
+}
+
+/**
+ * Pure SVG Barcode Renderer (Code 128 / Linear Barcode pattern)
+ * Generates an SVG string ready to inject or display
+ */
+export function generateBarcodeSvg(code: string, width = 240, height = 70): string {
+  if (!code) code = 'RST-0000';
+  
+  // Create a pseudo-random deterministic bar pattern based on char codes
+  const bars: { x: number; w: number }[] = [];
+  let currentX = 15;
+  const barUnit = (width - 30) / (code.length * 9 + 20);
+
+  // Start pattern
+  bars.push({ x: currentX, w: barUnit * 2 });
+  currentX += barUnit * 3;
+  bars.push({ x: currentX, w: barUnit });
+  currentX += barUnit * 2;
+
+  for (let i = 0; i < code.length; i++) {
+    const charCode = code.charCodeAt(i);
+    const pattern = (charCode * 7 + i * 13) % 16;
+    
+    // Draw 3 to 4 bars per character
+    bars.push({ x: currentX, w: barUnit * (1 + (pattern % 2)) });
+    currentX += barUnit * (2 + ((pattern >> 1) % 2));
+    bars.push({ x: currentX, w: barUnit * (1 + ((pattern >> 2) % 2)) });
+    currentX += barUnit * (2 + ((pattern >> 3) % 2));
+  }
+
+  // Stop pattern
+  bars.push({ x: currentX, w: barUnit * 2 });
+  currentX += barUnit * 3;
+  bars.push({ x: currentX, w: barUnit * 2 });
+
+  const rects = bars
+    .map(b => `<rect x="${b.x.toFixed(1)}" y="8" width="${b.w.toFixed(1)}" height="${height - 24}" fill="#0f172a" />`)
+    .join('');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" class="w-full h-auto">
+    <rect width="${width}" height="${height}" fill="#ffffff" rx="4"/>
+    ${rects}
+    <text x="${width / 2}" y="${height - 4}" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0f172a">${code}</text>
+  </svg>`;
+}
+
+export type Language = 'bn' | 'en' | 'ar';
+
+export interface BusinessConfig {
+  business_name: string;
+  legal_name: string;
+  cr_no: string;
+  address: string;
+  phone: string;
+  email: string;
+  currency: string;
+  currency_symbol: string;
+  vatRate: number;
+  vatEnabled: boolean;
+  decimalPlaces: number;
+  invoice_prefix: string;
+  lowStockAlert: number;
+  telecomLowBalanceAlert: number;
+  themePreset?: 'emerald' | 'cyberpunk' | 'sapphire' | 'amethyst' | 'obsidian' | 'solar';
+  fontScale?: 'compact' | 'normal' | 'spacious';
+  tableDensity?: 'tight' | 'balanced' | 'relaxed';
+  hideProfitInPOS?: boolean;
+  hideCostPriceInPOS?: boolean;
+  requireImeiForMobile?: boolean;
+  soundAlerts?: {
+    siren?: boolean;
+    cashRegister?: boolean;
+    scannerBeep?: boolean;
+    buttonClick?: boolean;
+  };
+  creditAlertThresholdDays?: number;
+  widgetVisibility?: Record<string, boolean>;
+  widgetPinned?: Record<string, boolean>;
+  hiddenPermissions?: Record<string, string[]>; // role or user permissions
+  landingPage?: LandingPageConfig;
+}
+
+export type ComponentCategory = 
+  | 'Microcontrollers'
+  | 'Integrated Circuits'
+  | 'Sensors'
+  | 'Displays'
+  | 'Power & Batteries'
+  | 'Passive Components'
+  | 'Wireless & Modules'
+  | 'Relays & Switches'
+  | 'Connectors & Cables'
+  | 'Tools & Soldering'
+  | 'Mobile Electronics'
+  | 'CCTV & Accessories';
+
+export interface ElectronicComponent {
+  id: number;
+  sku: string;
+  name: string;
+  category: ComponentCategory;
+  subcategory: string;
+  packageType: string;
+  voltage: string;
+  specs: Record<string, string>;
+  pinoutSummary?: string;
+  description: string;
+  cost: number;
+  price: number;
+  stock: number;
+  minStock: number;
+  barcode: string;
+  datasheetUrl?: string;
+  isPopular?: boolean;
+  tags: string[];
+}
+
+export interface Product {
+  id: number;
+  sku: string;
+  name: string;
+  brand: string;
+  category: string;
+  cost: number;
+  price: number;
+  wholesale?: number;
+  stock: number;
+  lowstock?: number;
+  barcode: string;
+  imei?: string;
+  serial?: string;
+  warranty?: string;
+  unit: string;
+  description?: string;
+  active: boolean;
+  hasImei?: boolean;
+  isComponent?: boolean;
+  is_deleted: boolean;
+}
+
+export interface PhoneBrand {
+  id: number;
+  name: string;
+  logo?: string;
+  device_count: number;
+  num_devices?: number;
+}
+
+export interface PhoneDevice {
+  id: number;
+  brand_id: number;
+  brand_name: string;
+  name: string;
+  device_name?: string;
+  picture?: string;
+  device_image?: string;
+  released_at?: string;
+  release_date?: string;
+  os?: string;
+  storage?: string;
+  ram?: string;
+  display?: string;
+  display_size?: string;
+  display_resolution?: string;
+  battery?: string;
+  chipset?: string;
+  camera_spec?: string;
+  device_type?: string;
+  priceEstimate?: number;
+}
+
+export interface CartItem {
+  id: number;
+  name: string;
+  sku?: string;
+  price: number;
+  cost: number;
+  qty: number;
+  isComponent?: boolean;
+  barcode?: string;
+  imei?: string;
+  serial?: string;
+  // Installation & CCTV Services parameters
+  hasInstallationService?: boolean;
+  installationFee?: number;
+  installationAdvancedPaid?: number;
+  installationDueOnCompletion?: number;
+  installationNotes?: string;
+}
+
+export interface Invoice {
+  id: number;
+  invoice_no: string;
+  date: string;
+  customer: string;
+  customer_phone?: string;
+  customer_id?: number;
+  items: CartItem[];
+  subtotal: number;
+  discount: number;
+  vat: number;
+  grand_total: number;
+  // Payment Breakdown
+  payment: 'Cash' | 'Card' | 'Bank' | 'Due' | 'Split';
+  amountReceivedCash?: number;
+  amountReceivedBankSwift?: number;
+  amountReceivedBankTransfer?: number;
+  amountCreditLedger?: number;
+  bankSwiftMachineNo?: string;
+  bankTransferRefNo?: string;
+  // Service Installation info
+  hasServiceInstallation?: boolean;
+  serviceAdvancedPaid?: number;
+  serviceDueOnCompletion?: number;
+  serviceWorkStatus?: 'Pending' | 'In Progress' | 'Completed';
+  serviceNotes?: string;
+  profit: number;
+  branch: string;
+  operator: string;
+  status: 'Paid' | 'Due' | 'Refunded';
+}
+
+export interface Customer {
+  id: number;
+  name: string;
+  phone: string;
+  email: string;
+  address: string;
+  balance: number;
+  creditDays?: number; // Days past due credit
+  isVip?: boolean;
+  loyaltyPoints?: number;
+  loyaltyTier?: 'Gold' | 'Silver' | 'Bronze';
+  is_deleted: boolean;
+}
+
+export interface LoyaltyCard {
+  id: number;
+  code: string;
+  type: 'Discount' | 'Membership' | 'Gift';
+  value: number; // percentage or fixed OMR
+  discountType: 'percent' | 'fixed';
+  customerName?: string;
+  expiresAt: string;
+  status: 'Active' | 'Used' | 'Expired';
+}
+
+export interface Branch {
+  id: number;
+  name: string;
+  address: string;
+  phone: string;
+  salesToday: number;
+  is_active: boolean;
+}
+
+export interface TelecomOperator {
+  id: number;
+  name: string;
+  code: string;
+  color: string;
+  balance: number;
+  commissionType: 'percent' | 'fixed';
+  commissionValue: number;
+  lowAlertThreshold: number;
+  is_active: boolean;
+}
+
+export interface TelecomTransaction {
+  id: number;
+  operatorId: number;
+  operatorName: string;
+  phoneNumber?: string;
+  amount: number;
+  profit: number;
+  previousBalance: number;
+  newBalance: number;
+  date: string;
+  time: string;
+  operator: string;
+}
+
+export interface DamageEntry {
+  id: number;
+  date: string;
+  itemName: string;
+  sku?: string;
+  qty: number;
+  costLost: number;
+  reason: string; // 'Broken in Transit' | 'Defective Unit' | 'Water Damage' | 'Short Circuit'
+  recordedBy: string;
+}
+
+export interface EmergencyAlert {
+  id: number;
+  active: boolean;
+  title: string;
+  message: string;
+  type: 'emergency_siren' | 'gemini_ai' | 'credit_alert' | 'low_stock' | 'branch_alert';
+  severity: 'critical' | 'warning' | 'info';
+  timestamp: string;
+  stoppedBy?: string;
+}
+
+export interface AuditLog {
+  id: number;
+  user: string;
+  action: string;
+  targetType: string;
+  targetId: any;
+  time: string;
+  branch?: string;
+}
+
+export interface AppNotification {
+  id: number;
+  title: string;
+  body: string;
+  type: 'sale' | 'stock' | 'system' | 'telecom' | 'alert';
+  time: string;
+  read: boolean;
+}
+
+export interface User {
+  id: number;
+  username: string;
+  password?: string;
+  fullname: string;
+  role: 'admin' | 'manager' | 'staff' | 'cashier';
+  branch: number;
+  branchName?: string;
+  phone?: string;
+  email?: string;
+  active?: boolean;
+  permissions?: Record<string, boolean>;
+  hiddenPages?: string[]; // e.g. ['pos', 'inventory', 'sql', 'accounts', 'telecom', 'catalog', 'phones', 'adminCenter']
+  hiddenOptions?: {
+    hideCostPrice?: boolean;
+    hideProfitMargin?: boolean;
+    hideSupplierBalances?: boolean;
+    hideFinancialSummary?: boolean;
+    hideDamagesCost?: boolean;
+  };
+  createdAt?: string;
+}
+
+export interface Employee {
+  id: number;
+  code: string;
+  name: string;
+  designation: string;
+  department: string;
+  shiftCategory: string;
+  hourlyRate: number; // in OMR
+  phone: string;
+  email?: string;
+  branch: string;
+  status: 'Active' | 'On Leave' | 'Terminated';
+}
+
+export interface AttendanceRecord {
+  id: number;
+  employeeId: number;
+  employeeCode: string;
+  employeeName: string;
+  branch: string;
+  date: string; // YYYY-MM-DD
+  checkInTime: string; // HH:mm or ISO
+  checkOutTime?: string; // HH:mm or ISO
+  breakMinutes: number;
+  totalHours: number; // working hours decimal (e.g. 8.25)
+  overtimeHours: number;
+  shiftCategory: string;
+  status: 'Checked In' | 'Completed' | 'Late' | 'Half Day' | 'Overtime';
+  hourlyRate: number;
+  calculatedPay: number; // totalHours * hourlyRate + (overtime * multiplier * rate)
+  isApproved: boolean;
+  approvedBy?: string;
+  notes?: string;
+}
+
+export interface AttendanceShiftCategory {
+  id: number;
+  name: string;
+  startTime: string; // HH:mm
+  endTime: string; // HH:mm
+  standardHours: number;
+  defaultBreakMinutes: number;
+  overtimeThresholdHours: number;
+  overtimeRateMultiplier: number;
+  color: string;
+}
+
+export interface AttendancePermissionRule {
+  id: number;
+  role: 'admin' | 'manager' | 'staff';
+  canCheckInOut: boolean;
+  canEditTimestamp: boolean;
+  canApprovePayroll: boolean;
+  canDeleteRecord: boolean;
+  canConfigureShifts: boolean;
+  canViewPayrollPay: boolean;
+}
+
+export interface AttendanceSettings {
+  autoDeductBreak: boolean;
+  defaultBreakMinutes: number;
+  standardWorkHoursPerDay: number;
+  overtimeMultiplier: number;
+  gracePeriodMinutes: number;
+  visibleColumns: {
+    employeeCode: boolean;
+    branch: boolean;
+    shift: boolean;
+    checkIn: boolean;
+    checkOut: boolean;
+    breakTime: boolean;
+    totalHours: boolean;
+    overtime: boolean;
+    hourlyRate: boolean;
+    payrollPay: boolean;
+    approval: boolean;
+    actions: boolean;
+  };
+}
+
+export interface QuotationItem {
+  id: number;
+  name: string;
+  sku?: string;
+  price: number;
+  cost?: number;
+  qty: number;
+  isComponent?: boolean;
+  warranty?: string;
+}
+
+export interface Quotation {
+  id: number;
+  quote_no: string;
+  customer_id?: number;
+  customer_name: string;
+  customer_phone?: string;
+  customer_email?: string;
+  date: string;
+  valid_until: string;
+  items: QuotationItem[];
+  subtotal: number;
+  discount: number;
+  vat: number;
+  grand_total: number;
+  status: 'Draft' | 'Sent' | 'Approved' | 'Converted' | 'Expired';
+  notes?: string;
+  terms?: string;
+}
+
+export interface BlogPost {
+  id: number;
+  title: string;
+  slug: string;
+  summary: string;
+  content: string;
+  author: string;
+  date: string;
+  category: string;
+  image: string;
+  tags: string[];
+  readTime: string;
+  published: boolean;
+}
+
+export interface LandingPageConfig {
+  domainName: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroTagline: string;
+  heroBadge: string;
+  aboutText: string;
+  servicesHighlights: { title: string; desc: string; icon: string }[];
+  portfolioStats: { label: string; value: string }[];
+  companyHighlights: string[];
+  contactWhatsapp: string;
+  contactAddress: string;
+  contactEmail: string;
+  enableVisitorShowcase: boolean;
+  hidePricesInShowcase: boolean; // default true: "VISITOR LANDING PAGE SHOW CASE SEE ANYTHING BUT NOT ANY PRICE"
+  featuredModelIds: number[];
+  blogPosts: BlogPost[];
+}
+
+import React, { useState, useEffect, useMemo } from 'react';
+import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
+import { ComponentCatalog } from './components/ComponentCatalog';
+import { SqlStudio } from './components/SqlStudio';
+import { POSInvoicing } from './components/POSInvoicing';
+import { BarcodeStudio } from './components/BarcodeStudio';
+import { TelecomUtility } from './components/TelecomUtility';
+import { DashboardView } from './components/DashboardView';
+import { InventoryManager } from './components/InventoryManager';
+import { AccountsProfit } from './components/AccountsProfit';
+import { CustomersManager } from './components/CustomersManager';
+import { WarrantyInstallment } from './components/WarrantyInstallment';
+import { AdminCenter } from './components/AdminCenter';
+import { SettingsModal } from './components/SettingsModal';
+import { AiAssistant } from './components/AiAssistant';
+import { NotificationDrawer } from './components/NotificationDrawer';
+import { LoginScreen } from './components/LoginScreen';
+import { PhoneModelsCatalog } from './components/PhoneModelsCatalog';
+import { VisitorLandingPage } from './components/VisitorLandingPage';
+
+import { db } from './lib/database';
+import { SoundEngine } from './lib/sound';
+import { Language, User, CartItem, Invoice } from './types';
+import { ShieldAlert, StopCircle, CheckCircle2 } from 'lucide-react';
+
+export default function App() {
+  // Authentication
+  const [currentUser, setCurrentUser] = useState<User | null>(() => {
+    const saved = localStorage.getItem('rst_user');
+    return saved ? JSON.parse(saved) : (db.users?.[0] || {
+      id: 1,
+      username: 'admin',
+      fullname: 'System Administrator',
+      role: 'admin',
+      branch: 1
+    });
+  });
+
+  // Language & Direction
+  const [lang, setLang] = useState<Language>(() => {
+    return (localStorage.getItem('rst_lang') as Language) || 'en';
+  });
+
+  // Active view
+  const [currentPage, setCurrentPage] = useState<string>('dashboard');
+
+  // Shared cart state
+  const [cart, setCart] = useState<CartItem[]>(() => {
+    const saved = localStorage.getItem('rst_cart');
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  // Audio feedback
+  const [soundEnabled, setSoundEnabled] = useState<boolean>(() => {
+    return localStorage.getItem('rst_sound') !== 'false';
+  });
+
+  // Emergency Siren State
+  const [isEmergencyActive, setIsEmergencyActive] = useState<boolean>(() => {
+    return db.activeEmergency?.active || false;
+  });
+
+  // UI drawers & modals
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [isNotifOpen, setIsNotifOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isVisitorMode, setIsVisitorMode] = useState(false);
+  const [tick, setTick] = useState(0);
+
+  // Sync direction with language
+  useEffect(() => {
+    localStorage.setItem('rst_lang', lang);
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = lang;
+  }, [lang]);
+
+  // Sync cart
+  useEffect(() => {
+    localStorage.setItem('rst_cart', JSON.stringify(cart));
+  }, [cart]);
+
+  // Sync sound
+  useEffect(() => {
+    SoundEngine.enabled = soundEnabled;
+    localStorage.setItem('rst_sound', String(soundEnabled));
+  }, [soundEnabled]);
+
+  const handleLanguageChange = (newLang: Language) => {
+    SoundEngine.click();
+    setLang(newLang);
+  };
+
+  const handleLogin = (user: User) => {
+    setCurrentUser(user);
+    setIsVisitorMode(false);
+    localStorage.setItem('rst_user', JSON.stringify(user));
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('rst_user');
+    SoundEngine.click();
+  };
+
+  // Emergency Handlers
+  const handleTriggerEmergency = () => {
+    db.triggerEmergencyAlert(
+      'CASH REGISTER & EMERGENCY DISCREPANCY',
+      'Emergency alert siren triggered on system dashboard. Admin intervention required.'
+    );
+    setIsEmergencyActive(true);
+    setTick(t => t + 1);
+  };
+
+  const handleStopEmergency = () => {
+    if (currentUser?.role !== 'admin') {
+      alert('Only Admin ID is authorized to silence this emergency alert.');
+      return;
+    }
+    db.stopEmergencyAlert(currentUser.fullname);
+    setIsEmergencyActive(false);
+    setTick(t => t + 1);
+  };
+
+  const handleAddToCart = (item: CartItem) => {
+    setCart((prevCart) => {
+      const existing = prevCart.find((i) => i.id === item.id && i.isComponent === item.isComponent);
+      if (existing) {
+        return prevCart.map((i) =>
+          i.id === item.id && i.isComponent === item.isComponent
+            ? { ...i, qty: i.qty + item.qty }
+            : i
+        );
+      }
+      return [...prevCart, item];
+    });
+  };
+
+  const handleUpdateQty = (index: number, newQty: number) => {
+    if (newQty <= 0) {
+      handleRemoveItem(index);
+      return;
+    }
+    setCart((prev) => {
+      const updated = [...prev];
+      updated[index] = { ...updated[index], qty: newQty };
+      return updated;
+    });
+  };
+
+  const handleRemoveItem = (index: number) => {
+    setCart((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleClearCart = () => {
+    setCart([]);
+  };
+
+  const handleInvoiceCreated = (invoice: Invoice) => {
+    setTick((t) => t + 1);
+  };
+
+  // Redirect away from hidden pages
+  useEffect(() => {
+    if (currentUser?.hiddenPages?.includes(currentPage)) {
+      setCurrentPage('dashboard');
+    }
+  }, [currentUser, currentPage]);
+
+  if (!currentUser) {
+    if (isVisitorMode) {
+      return (
+        <VisitorLandingPage
+          lang={lang}
+          onLanguageChange={handleLanguageChange}
+          onGoToLogin={() => setIsVisitorMode(false)}
+        />
+      );
+    }
+
+    return (
+      <LoginScreen
+        onLogin={handleLogin}
+        lang={lang}
+        onLanguageChange={handleLanguageChange}
+        onViewShowcase={() => setIsVisitorMode(true)}
+      />
+    );
+  }
+
+  const unreadNotifsCount = db.notifications.filter((n) => !n.read).length;
+
+  const themePreset = db.config.themePreset || 'emerald';
+  const fontScale = db.config.fontScale || 'normal';
+
+  const themeClasses = useMemo(() => {
+    let bg = 'bg-slate-950 text-slate-100';
+    if (themePreset === 'obsidian') bg = 'bg-black text-neutral-100';
+    else if (themePreset === 'sapphire') bg = 'bg-slate-950 text-sky-100';
+    else if (themePreset === 'amethyst') bg = 'bg-slate-950 text-purple-100';
+    else if (themePreset === 'solar') bg = 'bg-stone-950 text-amber-100';
+    else if (themePreset === 'cyberpunk') bg = 'bg-slate-950 text-rose-100';
+
+    let font = 'text-sm';
+    if (fontScale === 'compact') font = 'text-[13px]';
+    else if (fontScale === 'spacious') font = 'text-base';
+
+    return `${bg} ${font}`;
+  }, [themePreset, fontScale, tick]);
+
+  return (
+    <div className={`min-h-screen ${themeClasses} flex flex-col font-sans transition-colors duration-300`}>
+      {/* Top Header */}
+      <Header
+        lang={lang}
+        onLanguageChange={handleLanguageChange}
+        currentUser={currentUser}
+        onLogout={handleLogout}
+        soundEnabled={soundEnabled}
+        onToggleSound={() => setSoundEnabled(!soundEnabled)}
+        unreadNotifsCount={unreadNotifsCount}
+        onToggleNotifications={() => setIsNotifOpen(true)}
+        cart={cart}
+        onOpenCart={() => setCurrentPage('pos')}
+        onNavigate={setCurrentPage}
+        onToggleMobileSidebar={() => setMobileSidebarOpen(!mobileSidebarOpen)}
+        onTriggerEmergencyTest={handleTriggerEmergency}
+        onStopEmergency={handleStopEmergency}
+        isEmergencyActive={isEmergencyActive}
+      />
+
+      <div className="flex-1 flex overflow-hidden">
+        {/* Sidebar */}
+        <Sidebar
+          currentPage={currentPage}
+          onNavigate={setCurrentPage}
+          lang={lang}
+          currentUser={currentUser}
+          onLogout={handleLogout}
+          mobileOpen={mobileSidebarOpen}
+          onCloseMobile={() => setMobileSidebarOpen(false)}
+        />
+
+        {/* Main Content Viewport */}
+        <main className="flex-1 lg:pl-64 p-4 sm:p-6 lg:p-8 overflow-y-auto max-w-7xl mx-auto w-full transition-all">
+          {currentPage === 'dashboard' && (
+            <DashboardView
+              lang={lang}
+              onNavigate={setCurrentPage}
+              currentUser={currentUser}
+              onTriggerEmergency={handleTriggerEmergency}
+              onStopEmergency={handleStopEmergency}
+              isEmergencyActive={isEmergencyActive}
+              onDataRefresh={() => setTick(t => t + 1)}
+            />
+          )}
+
+          {currentPage === 'catalog' && (
+            <ComponentCatalog
+              components={db.components}
+              onAddToCart={handleAddToCart}
+              lang={lang}
+              onRefreshComponents={() => setTick((t) => t + 1)}
+            />
+          )}
+
+          {currentPage === 'pos' && (
+            <POSInvoicing
+              cart={cart}
+              onUpdateQty={handleUpdateQty}
+              onRemoveItem={handleRemoveItem}
+              onClearCart={handleClearCart}
+              onAddToCart={handleAddToCart}
+              lang={lang}
+              onInvoiceCreated={handleInvoiceCreated}
+            />
+          )}
+
+          {currentPage === 'phones' && (
+            <PhoneModelsCatalog
+              lang={lang}
+              currentUser={currentUser}
+              onAddToCart={handleAddToCart}
+              onNavigate={setCurrentPage}
+            />
+          )}
+
+          {currentPage === 'sql' && (
+            <SqlStudio
+              lang={lang}
+              onDataMutated={() => setTick((t) => t + 1)}
+            />
+          )}
+
+          {currentPage === 'inventory' && (
+            <InventoryManager
+              lang={lang}
+              onRefresh={() => setTick((t) => t + 1)}
+            />
+          )}
+
+          {currentPage === 'barcode' && (
+            <BarcodeStudio
+              lang={lang}
+            />
+          )}
+
+          {currentPage === 'telecom' && (
+            <TelecomUtility
+              lang={lang}
+            />
+          )}
+
+          {currentPage === 'accounts' && (
+            <AccountsProfit
+              lang={lang}
+            />
+          )}
+
+          {currentPage === 'customers' && (
+            <CustomersManager
+              lang={lang}
+            />
+          )}
+
+          {currentPage === 'warranty' && (
+            <WarrantyInstallment
+              lang={lang}
+            />
+          )}
+
+          {currentPage === 'adminCenter' && (
+            <AdminCenter
+              lang={lang}
+              currentUser={currentUser}
+              onRefresh={() => setTick(t => t + 1)}
+            />
+          )}
+
+          {currentPage === 'visitor' && (
+            <VisitorLandingPage
+              lang={lang}
+              onLanguageChange={handleLanguageChange}
+              onGoToLogin={handleLogout}
+              onOpenApp={() => setCurrentPage('dashboard')}
+              isLoggedIn={true}
+            />
+          )}
+
+          {currentPage === 'settings' && (
+            <div className="p-4 bg-slate-900 rounded-2xl border border-slate-800">
+              <button
+                onClick={() => setIsSettingsOpen(true)}
+                className="bg-emerald-600 text-white font-bold px-4 py-2 rounded-xl text-xs"
+              >
+                Open System Configuration Panel
+              </button>
+            </div>
+          )}
+        </main>
+      </div>
+
+      {/* Emergency Siren Modal Alert Popup (when siren is actively ringing) */}
+      {isEmergencyActive && (
+        <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="bg-slate-900 border-2 border-rose-600 rounded-3xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl animate-in zoom-in-95 duration-200">
+            <div className="w-16 h-16 rounded-full bg-rose-600/20 text-rose-500 border border-rose-500/30 flex items-center justify-center mx-auto animate-bounce">
+              <ShieldAlert className="w-9 h-9" />
+            </div>
+
+            <div>
+              <h2 className="text-xl font-black text-rose-400 tracking-tight uppercase">
+                🚨 EMERGENCY SIREN ACTIVE
+              </h2>
+              <p className="text-xs text-slate-300 font-mono mt-1">
+                {db.activeEmergency?.message || 'High-priority financial / security alert triggered.'}
+              </p>
+            </div>
+
+            <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs font-mono text-slate-400">
+              Time Triggered: {db.activeEmergency?.timestamp || new Date().toLocaleTimeString()}
+            </div>
+
+            {currentUser?.role === 'admin' ? (
+              <button
+                onClick={handleStopEmergency}
+                className="w-full py-3 bg-white hover:bg-slate-100 text-rose-700 font-black rounded-xl text-sm transition shadow-xl flex items-center justify-center gap-2"
+              >
+                <StopCircle className="w-5 h-5 text-rose-700" />
+                <span>STOP EMERGENCY SIREN (ADMIN)</span>
+              </button>
+            ) : (
+              <div className="p-3 bg-rose-950/60 border border-rose-900 text-rose-300 text-xs rounded-xl font-mono">
+                🔒 You are logged in as {currentUser?.username}. Only System Administrator can stop the emergency alert.
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Floating AI Assistant Copilot */}
+      <AiAssistant />
+
+      {/* Slide-out Notification Drawer */}
+      <NotificationDrawer
+        isOpen={isNotifOpen}
+        onClose={() => setIsNotifOpen(false)}
+        onClear={() => {
+          db.notifications = [];
+          setTick((t) => t + 1);
+        }}
+      />
+
+      {/* System Settings Modal */}
+      <SettingsModal
+        isOpen={isSettingsOpen || currentPage === 'settings'}
+        onClose={() => {
+          setIsSettingsOpen(false);
+          if (currentPage === 'settings') setCurrentPage('dashboard');
+          setTick((t) => t + 1);
+        }}
+        lang={lang}
+      />
+    </div>
+  );
+
+https://github.com/azharimm/phone-specs-api.git
+https://github.com/azharimm/phone-specs-api.git
+https://github.com/topics/phone-specification
+https://techspecs.io/
+API ID 
+6ad5ffbb2d7860c77e24b88e
+056bfedd-e331-4612-b17b-0281491afe6b
+API KEY

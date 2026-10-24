@@ -1,0 +1,6 @@
+{
+  "name": "Top Telecom Oman & RST Electronics ERP Platform",
+  "description": "Enterprise Omnichannel Business Portal, Public B2B Website & ERP System for Top Telecom Oman & RST Electronics featuring POS, IMEI/Barcode tracking, Multi-format Invoicing, Accounting, Repair Services & Google Drive Cloud Space.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
